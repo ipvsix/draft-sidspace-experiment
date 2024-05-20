@@ -9,19 +9,19 @@ number:
 date:
 consensus: true
 v: 3
-area: AREA
-workgroup: WG Working Group
+area: "Routing"
+workgroup: "Source Packet Routing in Networking"
 keyword:
  - next generation
  - unicorn
  - sparkling distributed ledger
 venue:
-  group: WG
-  type: Working Group
-  mail: WG@example.com
-  arch: https://example.com/WG
-  github: USER/REPO
-  latest: https://example.com/LATEST
+  group: "Source Packet Routing in Networking"
+  type: "Working Group"
+  mail: "spring@ietf.org"
+  arch: "https://mailarchive.ietf.org/arch/browse/spring/"
+  github: "ipvsix/draft-sidspace-experiment"
+  latest: "https://ipvsix.github.io/draft-sidspace-experiment/draft-ek-spring-sidspace-experiment.html"
 
 author:
  -
