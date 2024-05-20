@@ -38,8 +38,8 @@ informative:
 --- abstract
 
 {{!I-D.ietf-6man-sids}} requested of IANA a dedicated prefix for Segment Routing over IPv6 {{?RFC8402}} Segment Identifiers (SRv6 SIDs),
-with the aim of "improv[ing] security by making it simpler to filter traffic at the edge of the SR domains."
-The prefix 5f00::/16 was allocated for this purpose ([IANA-IPv6Special]).
+with the aim of "improv&#91;ing&#93; security by making it simpler to filter traffic at the edge of the SR domains."
+The prefix 5f00::/16 was allocated for this purpose (&#91;IANA-IPv6Special&#93;).
 No requirements were placed on the use of this prefix nor any recommendations made for structured use of this prefix.
 
 This specification proposes an experiemental structure for use of the SRv6 SIDs prefix.
@@ -54,7 +54,7 @@ The goal is to aid SRv6 operations while preserving the ability to use this pref
 
 {{!I-D.ietf-6man-sids}} requested of IANA a dedicated prefix for Segment Routing over IPv6 {{?RFC8402}} Segment Identifiers (SRv6 SIDs),
 with the aim of "improv[ing] security by making it simpler to filter traffic at the edge of the SR domains."
-The prefix 5f00::/16 was allocated for this purpose ([IANA-IPv6Special]).
+The prefix 5f00::/16 was allocated for this purpose (&#91;IANA-IPv6Special&#93;).
 No requirements were placed on the use of this prefix nor any recommendations made for structured use of this prefix.
 
 This specification proposes an experiemental structure for use of the SRv6 SIDs prefix.
@@ -66,17 +66,17 @@ The goal is to aid SRv6 operations while preserving the ability to use this pref
 # Proposed Structure
 
 The recommendation of this specification is for SRv6 domains to allocate SIDs from prefixes that are concatenations of the SRv6 SID prefix (5f00::/16) and an applicable ASN.
-Assuming 32-bit ASNs, this yields a /48 per ASN in use within an SRv6 domain, i.e. 5f00:<as.hi16>:<as.lo16>::/48.
+Assuming 32-bit ASNs, this yields a /48 per ASN in use within an SRv6 domain, i.e. 5f00:&lt;as.hi16&gt;:&lt;as.lo16&gt;::/48.
 
 ## SRv6 SID Documentation Prefixes
 
-Using 16-bit and 32-bit ASNs reserved for documentation purposes ([IANA-ASNs]) yields several SRv6 SID prefixes that might be used for SRv6 documentation purposes.
+Using 16-bit and 32-bit ASNs reserved for documentation purposes (&#91;IANA-ASNs&#93;) yields several SRv6 SID prefixes that might be used for SRv6 documentation purposes.
 These prefixes presently include:
 ...
 
 ## SRv6 SID Private Use Prefixes
 
-Using 16-bit and 32-bit ASNs reserved for private use purposes ([IANA-ASNs]) yields several SRv6 SID prefixes for private use.
+Using 16-bit and 32-bit ASNs reserved for private use purposes (&#91;IANA-ASNs&#93;) yields several SRv6 SID prefixes for private use.
 These prefixes presently include:
 ...
 
