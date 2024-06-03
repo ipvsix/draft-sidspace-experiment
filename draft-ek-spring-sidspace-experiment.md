@@ -37,12 +37,7 @@ informative:
 
 --- abstract
 
-{{!I-D.ietf-6man-sids}} requested of IANA a dedicated prefix for Segment Routing over IPv6 {{?RFC8402}} Segment Identifiers (SRv6 SIDs),
-with the aim of "improv&#91;ing&#93; security by making it simpler to filter traffic at the edge of the SR domains."
-The prefix 5f00::/16 was allocated for this purpose (&#91;IANA-IPv6Special&#93;).
-No requirements were placed on the use of this prefix nor any recommendations made for structured use of this prefix.
-
-This specification proposes an experiemental structure for use of the SRv6 SIDs prefix.
+This specification proposes an experimental structure for use of the SRv6 SIDs prefix in support of Inter-domain SRv6 networks.
 The core of the proposal is to structure the address space by Autonomous System Number (ASN).
 
 Use of this proposed structure is entirely voluntary.
@@ -57,7 +52,7 @@ with the aim of "improv[ing] security by making it simpler to filter traffic at 
 The prefix 5f00::/16 was allocated for this purpose (&#91;IANA-IPv6Special&#93;).
 No requirements were placed on the use of this prefix nor any recommendations made for structured use of this prefix.
 
-This specification proposes an experiemental structure for use of the SRv6 SIDs prefix.
+This specification proposes an experiemental structure for use of the SRv6 SIDs prefix in support of Inter-domain SRv6 networks.
 The core of the proposal is to structure the address space by Autonomous System Number (ASN).
 
 Use of this proposed structure is entirely voluntary.
