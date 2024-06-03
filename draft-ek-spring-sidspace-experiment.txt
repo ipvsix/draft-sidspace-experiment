@@ -4,8 +4,8 @@
 
 Source Packet Routing in Networking                             E. Kline
 Internet-Draft                                Aalyria Technologies, Inc.
-Intended status: Informational                               20 May 2024
-Expires: 21 November 2024
+Intended status: Informational                               3 June 2024
+Expires: 5 December 2024
 
 
                     SID Space (5f00::/16) Experiment
@@ -13,17 +13,10 @@ Expires: 21 November 2024
 
 Abstract
 
-   [I-D.ietf-6man-sids] requested of IANA a dedicated prefix for Segment
-   Routing over IPv6 [RFC8402] Segment Identifiers (SRv6 SIDs), with the
-   aim of "improv[ing] security by making it simpler to filter traffic
-   at the edge of the SR domains."  The prefix 5f00::/16 was allocated
-   for this purpose ([IANA-IPv6Special]).  No requirements were placed
-   on the use of this prefix nor any recommendations made for structured
-   use of this prefix.
-
-   This specification proposes an experiemental structure for use of the
-   SRv6 SIDs prefix.  The core of the proposal is to structure the
-   address space by Autonomous System Number (ASN).
+   This specification proposes an experimental structure for use of the
+   SRv6 SIDs prefix in support of Inter-domain SRv6 networks.  The core
+   of the proposal is to structure the address space by Autonomous
+   System Number (ASN).
 
    Use of this proposed structure is entirely voluntary.  The goal is to
    aid SRv6 operations while preserving the ability to use this prefix
@@ -62,7 +55,7 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on 21 November 2024.
+   This Internet-Draft will expire on 5 December 2024.
 
 Copyright Notice
 
@@ -104,8 +97,9 @@ Table of Contents
    use of this prefix.
 
    This specification proposes an experiemental structure for use of the
-   SRv6 SIDs prefix.  The core of the proposal is to structure the
-   address space by Autonomous System Number (ASN).
+   SRv6 SIDs prefix in support of Inter-domain SRv6 networks.  The core
+   of the proposal is to structure the address space by Autonomous
+   System Number (ASN).
 
    Use of this proposed structure is entirely voluntary.  The goal is to
    aid SRv6 operations while preserving the ability to use this prefix

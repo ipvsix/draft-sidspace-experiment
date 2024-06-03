@@ -6,16 +6,12 @@
 <meta content="initial-scale=1.0" name="viewport">
 <title>SID Space (5f00::/16) Experiment</title>
 <meta content="Erik Kline" name="author">
-<meta content='
-        requested of IANA a dedicated prefix for Segment Routing over IPv6   Segment Identifiers (SRv6 SIDs),
-with the aim of "improv[ing] security by making it simpler to filter traffic at the edge of the SR domains."
-The prefix 5f00::/16 was allocated for this purpose ([IANA-IPv6Special]).
-No requirements were placed on the use of this prefix nor any recommendations made for structured use of this prefix. 
-       This specification proposes an experiemental structure for use of the SRv6 SIDs prefix.
+<meta content="
+       This specification proposes an experimental structure for use of the SRv6 SIDs prefix in support of Inter-domain SRv6 networks.
 The core of the proposal is to structure the address space by Autonomous System Number (ASN). 
        Use of this proposed structure is entirely voluntary.
 The goal is to aid SRv6 operations while preserving the ability to use this prefix across cooperating SRv6 domains, but not across the general Internet. 
-    ' name="description">
+    " name="description">
 <meta content="xml2rfc 3.21.0" name="generator">
 <meta content="Segment Routing for IPv6 Segment Identifiers" name="keyword">
 <meta content="SRv6 SIDs" name="keyword">
@@ -1033,11 +1029,11 @@ svg :is([fill="white"], [fill^="#fff"]) {
 <thead><tr>
 <td class="left">Internet-Draft</td>
 <td class="center">SID Space Exp.</td>
-<td class="right">May 2024</td>
+<td class="right">June 2024</td>
 </tr></thead>
 <tfoot><tr>
 <td class="left">Kline</td>
-<td class="center">Expires 21 November 2024</td>
+<td class="center">Expires 5 December 2024</td>
 <td class="right">[Page]</td>
 </tr></tfoot>
 </table>
@@ -1050,12 +1046,12 @@ svg :is([fill="white"], [fill^="#fff"]) {
 <dd class="internet-draft">draft-ek-spring-sidspace-experiment-latest</dd>
 <dt class="label-published">Published:</dt>
 <dd class="published">
-<time datetime="2024-05-20" class="published">20 May 2024</time>
+<time datetime="2024-06-03" class="published">3 June 2024</time>
     </dd>
 <dt class="label-intended-status">Intended Status:</dt>
 <dd class="intended-status">Informational</dd>
 <dt class="label-expires">Expires:</dt>
-<dd class="expires"><time datetime="2024-11-21">21 November 2024</time></dd>
+<dd class="expires"><time datetime="2024-12-05">5 December 2024</time></dd>
 <dt class="label-authors">Author:</dt>
 <dd class="authors">
 <div class="author">
@@ -1068,14 +1064,10 @@ svg :is([fill="white"], [fill^="#fff"]) {
 <h1 id="title">SID Space (5f00::/16) Experiment</h1>
 <section id="section-abstract">
       <h2 id="abstract"><a href="#abstract" class="selfRef">Abstract</a></h2>
-<p id="section-abstract-1"><span>[<a href="#I-D.ietf-6man-sids" class="cite xref">I-D.ietf-6man-sids</a>]</span> requested of IANA a dedicated prefix for Segment Routing over IPv6 <span>[<a href="#RFC8402" class="cite xref">RFC8402</a>]</span> Segment Identifiers (SRv6 SIDs),
-with the aim of "improv[ing] security by making it simpler to filter traffic at the edge of the SR domains."
-The prefix 5f00::/16 was allocated for this purpose ([IANA-IPv6Special]).
-No requirements were placed on the use of this prefix nor any recommendations made for structured use of this prefix.<a href="#section-abstract-1" class="pilcrow">¶</a></p>
-<p id="section-abstract-2">This specification proposes an experiemental structure for use of the SRv6 SIDs prefix.
-The core of the proposal is to structure the address space by Autonomous System Number (ASN).<a href="#section-abstract-2" class="pilcrow">¶</a></p>
-<p id="section-abstract-3">Use of this proposed structure is entirely voluntary.
-The goal is to aid SRv6 operations while preserving the ability to use this prefix across cooperating SRv6 domains, but not across the general Internet.<a href="#section-abstract-3" class="pilcrow">¶</a></p>
+<p id="section-abstract-1">This specification proposes an experimental structure for use of the SRv6 SIDs prefix in support of Inter-domain SRv6 networks.
+The core of the proposal is to structure the address space by Autonomous System Number (ASN).<a href="#section-abstract-1" class="pilcrow">¶</a></p>
+<p id="section-abstract-2">Use of this proposed structure is entirely voluntary.
+The goal is to aid SRv6 operations while preserving the ability to use this prefix across cooperating SRv6 domains, but not across the general Internet.<a href="#section-abstract-2" class="pilcrow">¶</a></p>
 </section>
 <section class="note rfcEditorRemove" id="section-note.1">
       <h2 id="name-about-this-document">
@@ -1112,7 +1104,7 @@ The goal is to aid SRv6 operations while preserving the ability to use this pref
         time. It is inappropriate to use Internet-Drafts as reference
         material or to cite them other than as "work in progress."<a href="#section-boilerplate.1-3" class="pilcrow">¶</a></p>
 <p id="section-boilerplate.1-4">
-        This Internet-Draft will expire on 21 November 2024.<a href="#section-boilerplate.1-4" class="pilcrow">¶</a></p>
+        This Internet-Draft will expire on 5 December 2024.<a href="#section-boilerplate.1-4" class="pilcrow">¶</a></p>
 </section>
 </div>
 <div id="copyright">
@@ -1194,7 +1186,7 @@ The goal is to aid SRv6 operations while preserving the ability to use this pref
 with the aim of "improv[ing] security by making it simpler to filter traffic at the edge of the SR domains."
 The prefix 5f00::/16 was allocated for this purpose ([IANA-IPv6Special]).
 No requirements were placed on the use of this prefix nor any recommendations made for structured use of this prefix.<a href="#section-1-1" class="pilcrow">¶</a></p>
-<p id="section-1-2">This specification proposes an experiemental structure for use of the SRv6 SIDs prefix.
+<p id="section-1-2">This specification proposes an experiemental structure for use of the SRv6 SIDs prefix in support of Inter-domain SRv6 networks.
 The core of the proposal is to structure the address space by Autonomous System Number (ASN).<a href="#section-1-2" class="pilcrow">¶</a></p>
 <p id="section-1-3">Use of this proposed structure is entirely voluntary.
 The goal is to aid SRv6 operations while preserving the ability to use this prefix across cooperating SRv6 domains, but not across the general Internet.<a href="#section-1-3" class="pilcrow">¶</a></p>
