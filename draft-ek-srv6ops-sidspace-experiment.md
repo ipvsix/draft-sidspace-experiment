@@ -3,24 +3,24 @@ title: "SID Space (5f00::/16) Experiment"
 abbrev: "SID Space Exp."
 category: info
 
-docname: draft-ek-spring-sidspace-experiment-latest
+docname: draft-ek-srv6ops-sidspace-experiment-latest
 submissiontype: IETF  # also: "independent", "editorial", "IAB", or "IRTF"
 number:
 date:
 consensus: true
 v: 3
-area: "Routing"
-workgroup: "Source Packet Routing in Networking"
+area: "Operations and Management"
+workgroup: "SRv6 Operations"
 keyword:
  - Segment Routing for IPv6 Segment Identifiers
  - SRv6 SIDs
 venue:
-  group: "Source Packet Routing in Networking"
+  group: "SRv6 Operations"
   type: "Working Group"
-  mail: "spring@ietf.org"
-  arch: "https://mailarchive.ietf.org/arch/browse/spring/"
+  mail: "srv6ops@ietf.org"
+  arch: "https://mailarchive.ietf.org/arch/browse/srv6ops/"
   github: "ipvsix/draft-sidspace-experiment"
-  latest: "https://ipvsix.github.io/draft-sidspace-experiment/draft-ek-spring-sidspace-experiment.html"
+  latest: "https://ipvsix.github.io/draft-sidspace-experiment/draft-ek-srv6ops-sidspace-experiment.html"
 
 author:
  -
@@ -33,6 +33,7 @@ normative:
   RFC6996:
 
 informative:
+  RFC1897:
   RFC8402:
 
 --- abstract
@@ -57,6 +58,8 @@ The core of the proposal is to structure the address space by Autonomous System 
 
 Use of this proposed structure is entirely voluntary.
 The goal is to aid SRv6 operations while preserving the ability to use this prefix across cooperating SRv6 domains, but not across the general Internet.
+
+As a point of historical interest, this proposal contains echos of the structure of the original 6bone test allocation ({{RFC1897}}).
 
 # Proposed Structure
 
