@@ -4,7 +4,7 @@
 
 SRv6 Operations                                                 E. Kline
 Internet-Draft                                Aalyria Technologies, Inc.
-Intended status: Informational                              22 July 2024
+Intended status: Experimental                               22 July 2024
 Expires: 23 January 2025
 
 
@@ -105,6 +105,11 @@ Table of Contents
    aid SRv6 operations while preserving the ability to use this prefix
    across cooperating SRv6 domains, but not across the general Internet.
 
+   The SID space prefix was allocated to improve ease of filtering.
+   Where SRv6 traffic using these prefixes may be shared with
+   cooperating partner networks, this proposal makes it easier to craft
+   filters that permit only SRv6 traffic from identified ASNs.
+
    As a point of historical interest, this proposal contains echos of
    the structure of the original 6bone test allocation ([RFC1897]).
 
@@ -130,11 +135,16 @@ Table of Contents
 
 3.  Evaluating the Experiment
 
-   Evaluation of the success of this experiment must be done by
-   surveying the experiences of those SRv6 domain operators that opted
-   to try it.  Feedback about ease of SID allocation or management,
-   improved security through ease of filtering, etc. may all point
-   towards a successful experiment.
+   Evaluation of the success of this experiment should be done in two
+   parts.  First, operators who have opted not to try it should be
+   surveyed to understand why not.  Answers that draw attention to
+   technical or operational concerns are of particular interest (as
+   opposed to just "not interested").
+
+   Second, a survey of experiences of those SRv6 domain operators that
+   opted to try it should be undertaken.  Feedback highlighting ease of
+   SID allocation or management, improved security through ease of
+   filtering, etc. may all point towards a successful experiment.
 
    As use of the structure proposed here is entirely voluntary, lack of
    adoption will clearly indicate a failed experiment.  Understanding
@@ -143,7 +153,12 @@ Table of Contents
 
 4.  Security Considerations
 
-   TODO Security
+   This document does not alter the inherent security posture of SRv6
+   ([RFC8402], [RFC8574]).  The SID space prefix was allocated to
+   improve ease of filtering.  Where SRv6 traffic using these prefixes
+   may be shared with cooperating partner networks, this proposal makes
+   it easier to craft filters that permit only SRv6 traffic from
+   identified ASNs.
 
 5.  IANA Considerations
 
@@ -174,6 +189,16 @@ Table of Contents
               Decraene, B., Litkowski, S., and R. Shakir, "Segment
               Routing Architecture", RFC 8402, DOI 10.17487/RFC8402,
               July 2018, <https://www.rfc-editor.org/rfc/rfc8402>.
+
+   [RFC8574]  Van de Sompel, H., Nelson, M., Bilder, G., Kunze, J., and
+              S. Warner, "cite-as: A Link Relation to Convey a Preferred
+              URI for Referencing", RFC 8574, DOI 10.17487/RFC8574,
+              April 2019, <https://www.rfc-editor.org/rfc/rfc8574>.
+
+   [RFC8754]  Filsfils, C., Ed., Dukes, D., Ed., Previdi, S., Leddy, J.,
+              Matsushima, S., and D. Voyer, "IPv6 Segment Routing Header
+              (SRH)", RFC 8754, DOI 10.17487/RFC8754, March 2020,
+              <https://www.rfc-editor.org/rfc/rfc8754>.
 
 Acknowledgments
 

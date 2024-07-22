@@ -1048,7 +1048,7 @@ svg :is([fill="white"], [fill^="#fff"]) {
 <time datetime="2024-07-22" class="published">22 July 2024</time>
     </dd>
 <dt class="label-intended-status">Intended Status:</dt>
-<dd class="intended-status">Informational</dd>
+<dd class="intended-status">Experimental</dd>
 <dt class="label-expires">Expires:</dt>
 <dd class="expires"><time datetime="2025-01-23">23 January 2025</time></dd>
 <dt class="label-authors">Author:</dt>
@@ -1189,7 +1189,10 @@ No requirements were placed on the use of this prefix nor any recommendations ma
 The core of the proposal is to structure the address space by Autonomous System Number (ASN).<a href="#section-1-2" class="pilcrow">¶</a></p>
 <p id="section-1-3">Use of this proposed structure is entirely voluntary.
 The goal is to aid SRv6 operations while preserving the ability to use this prefix across cooperating SRv6 domains, but not across the general Internet.<a href="#section-1-3" class="pilcrow">¶</a></p>
-<p id="section-1-4">As a point of historical interest, this proposal contains echos of the structure of the original 6bone test allocation (<span>[<a href="#RFC1897" class="cite xref">RFC1897</a>]</span>).<a href="#section-1-4" class="pilcrow">¶</a></p>
+<p id="section-1-4">The SID space prefix was allocated to improve ease of filtering.
+Where SRv6 traffic using these prefixes may be shared with cooperating partner networks,
+this proposal makes it easier to craft filters that permit only SRv6 traffic from identified ASNs.<a href="#section-1-4" class="pilcrow">¶</a></p>
+<p id="section-1-5">As a point of historical interest, this proposal contains echos of the structure of the original 6bone test allocation (<span>[<a href="#RFC1897" class="cite xref">RFC1897</a>]</span>).<a href="#section-1-5" class="pilcrow">¶</a></p>
 </section>
 </div>
 <div id="proposed-structure">
@@ -1226,10 +1229,13 @@ These prefixes presently include:
       <h2 id="name-evaluating-the-experiment">
 <a href="#section-3" class="section-number selfRef">3. </a><a href="#name-evaluating-the-experiment" class="section-name selfRef">Evaluating the Experiment</a>
       </h2>
-<p id="section-3-1">Evaluation of the success of this experiment must be done by surveying the experiences of those SRv6 domain operators that opted to try it.
-Feedback about ease of SID allocation or management, improved security through ease of filtering, etc. may all point towards a successful experiment.<a href="#section-3-1" class="pilcrow">¶</a></p>
-<p id="section-3-2">As use of the structure proposed here is entirely voluntary, lack of adoption will clearly indicate a failed experiment.
-Understanding the reasons for lack of adoption may prove helpful should any further experiments of this sort be undertaken.<a href="#section-3-2" class="pilcrow">¶</a></p>
+<p id="section-3-1">Evaluation of the success of this experiment should be done in two parts.
+First, operators who have opted not to try it should be surveyed to understand why not.
+Answers that draw attention to technical or operational concerns are of particular interest (as opposed to just "not interested").<a href="#section-3-1" class="pilcrow">¶</a></p>
+<p id="section-3-2">Second, a survey of experiences of those SRv6 domain operators that opted to try it should be undertaken.
+Feedback highlighting ease of SID allocation or management, improved security through ease of filtering, etc. may all point towards a successful experiment.<a href="#section-3-2" class="pilcrow">¶</a></p>
+<p id="section-3-3">As use of the structure proposed here is entirely voluntary, lack of adoption will clearly indicate a failed experiment.
+Understanding the reasons for lack of adoption may prove helpful should any further experiments of this sort be undertaken.<a href="#section-3-3" class="pilcrow">¶</a></p>
 </section>
 </div>
 <div id="security-considerations">
@@ -1237,7 +1243,10 @@ Understanding the reasons for lack of adoption may prove helpful should any furt
       <h2 id="name-security-considerations">
 <a href="#section-4" class="section-number selfRef">4. </a><a href="#name-security-considerations" class="section-name selfRef">Security Considerations</a>
       </h2>
-<p id="section-4-1">TODO Security<a href="#section-4-1" class="pilcrow">¶</a></p>
+<p id="section-4-1">This document does not alter the inherent security posture of SRv6 (<span>[<a href="#RFC8402" class="cite xref">RFC8402</a>]</span>, <span>[<a href="#RFC8574" class="cite xref">RFC8574</a>]</span>).
+The SID space prefix was allocated to improve ease of filtering.
+Where SRv6 traffic using these prefixes may be shared with cooperating partner networks,
+this proposal makes it easier to craft filters that permit only SRv6 traffic from identified ASNs.<a href="#section-4-1" class="pilcrow">¶</a></p>
 </section>
 </div>
 <div id="iana-considerations">
@@ -1281,8 +1290,16 @@ Understanding the reasons for lack of adoption may prove helpful should any furt
 <span class="refAuthor">Hinden, R.</span> and <span class="refAuthor">J. Postel</span>, <span class="refTitle">"IPv6 Testing Address Allocation"</span>, <span class="seriesInfo">RFC 1897</span>, <span class="seriesInfo">DOI 10.17487/RFC1897</span>, <time datetime="1996-01" class="refDate">January 1996</time>, <span>&lt;<a href="https://www.rfc-editor.org/rfc/rfc1897">https://www.rfc-editor.org/rfc/rfc1897</a>&gt;</span>. </dd>
 <dd class="break"></dd>
 <dt id="RFC8402">[RFC8402]</dt>
-      <dd>
+        <dd>
 <span class="refAuthor">Filsfils, C., Ed.</span>, <span class="refAuthor">Previdi, S., Ed.</span>, <span class="refAuthor">Ginsberg, L.</span>, <span class="refAuthor">Decraene, B.</span>, <span class="refAuthor">Litkowski, S.</span>, and <span class="refAuthor">R. Shakir</span>, <span class="refTitle">"Segment Routing Architecture"</span>, <span class="seriesInfo">RFC 8402</span>, <span class="seriesInfo">DOI 10.17487/RFC8402</span>, <time datetime="2018-07" class="refDate">July 2018</time>, <span>&lt;<a href="https://www.rfc-editor.org/rfc/rfc8402">https://www.rfc-editor.org/rfc/rfc8402</a>&gt;</span>. </dd>
+<dd class="break"></dd>
+<dt id="RFC8574">[RFC8574]</dt>
+        <dd>
+<span class="refAuthor">Van de Sompel, H.</span>, <span class="refAuthor">Nelson, M.</span>, <span class="refAuthor">Bilder, G.</span>, <span class="refAuthor">Kunze, J.</span>, and <span class="refAuthor">S. Warner</span>, <span class="refTitle">"cite-as: A Link Relation to Convey a Preferred URI for Referencing"</span>, <span class="seriesInfo">RFC 8574</span>, <span class="seriesInfo">DOI 10.17487/RFC8574</span>, <time datetime="2019-04" class="refDate">April 2019</time>, <span>&lt;<a href="https://www.rfc-editor.org/rfc/rfc8574">https://www.rfc-editor.org/rfc/rfc8574</a>&gt;</span>. </dd>
+<dd class="break"></dd>
+<dt id="RFC8754">[RFC8754]</dt>
+      <dd>
+<span class="refAuthor">Filsfils, C., Ed.</span>, <span class="refAuthor">Dukes, D., Ed.</span>, <span class="refAuthor">Previdi, S.</span>, <span class="refAuthor">Leddy, J.</span>, <span class="refAuthor">Matsushima, S.</span>, and <span class="refAuthor">D. Voyer</span>, <span class="refTitle">"IPv6 Segment Routing Header (SRH)"</span>, <span class="seriesInfo">RFC 8754</span>, <span class="seriesInfo">DOI 10.17487/RFC8754</span>, <time datetime="2020-03" class="refDate">March 2020</time>, <span>&lt;<a href="https://www.rfc-editor.org/rfc/rfc8754">https://www.rfc-editor.org/rfc/rfc8754</a>&gt;</span>. </dd>
 <dd class="break"></dd>
 </dl>
 </section>
