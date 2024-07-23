@@ -154,7 +154,7 @@ Table of Contents
 4.  Security Considerations
 
    This document does not alter the inherent security posture of SRv6
-   ([RFC8402], [RFC8574]).  The SID space prefix was allocated to
+   ([RFC8402], [RFC8754]).  The SID space prefix was allocated to
    improve ease of filtering.  Where SRv6 traffic using these prefixes
    may be shared with cooperating partner networks, this proposal makes
    it easier to craft filters that permit only SRv6 traffic from
@@ -189,11 +189,6 @@ Table of Contents
               Decraene, B., Litkowski, S., and R. Shakir, "Segment
               Routing Architecture", RFC 8402, DOI 10.17487/RFC8402,
               July 2018, <https://www.rfc-editor.org/rfc/rfc8402>.
-
-   [RFC8574]  Van de Sompel, H., Nelson, M., Bilder, G., Kunze, J., and
-              S. Warner, "cite-as: A Link Relation to Convey a Preferred
-              URI for Referencing", RFC 8574, DOI 10.17487/RFC8574,
-              April 2019, <https://www.rfc-editor.org/rfc/rfc8574>.
 
    [RFC8754]  Filsfils, C., Ed., Dukes, D., Ed., Previdi, S., Leddy, J.,
               Matsushima, S., and D. Voyer, "IPv6 Segment Routing Header
