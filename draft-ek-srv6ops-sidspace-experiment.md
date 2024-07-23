@@ -1,7 +1,7 @@
 ---
 title: "SID Space (5f00::/16) Experiment"
 abbrev: "SID Space Exp."
-category: info
+category: exp
 
 docname: draft-ek-srv6ops-sidspace-experiment-latest
 submissiontype: IETF  # also: "independent", "editorial", "IAB", or "IRTF"
@@ -35,6 +35,7 @@ normative:
 informative:
   RFC1897:
   RFC8402:
+  RFC8754:
 
 --- abstract
 
@@ -59,6 +60,10 @@ The core of the proposal is to structure the address space by Autonomous System 
 Use of this proposed structure is entirely voluntary.
 The goal is to aid SRv6 operations while preserving the ability to use this prefix across cooperating SRv6 domains, but not across the general Internet.
 
+The SID space prefix was allocated to improve ease of filtering.
+Where SRv6 traffic using these prefixes may be shared with cooperating partner networks,
+this proposal makes it easier to craft filters that permit only SRv6 traffic from identified ASNs.
+
 As a point of historical interest, this proposal contains echos of the structure of the original 6bone test allocation ({{RFC1897}}).
 
 # Proposed Structure
@@ -80,16 +85,22 @@ These prefixes presently include:
 
 # Evaluating the Experiment
 
-Evaluation of the success of this experiment must be done by surveying the experiences of those SRv6 domain operators that opted to try it.
-Feedback about ease of SID allocation or management, improved security through ease of filtering, etc. may all point towards a successful experiment.
+Evaluation of the success of this experiment should be done in two parts.
+First, operators who have opted not to try it should be surveyed to understand why not.
+Answers that draw attention to technical or operational concerns are of particular interest (as opposed to just "not interested").
+
+Second, a survey of experiences of those SRv6 domain operators that opted to try it should be undertaken.
+Feedback highlighting ease of SID allocation or management, improved security through ease of filtering, etc. may all point towards a successful experiment.
 
 As use of the structure proposed here is entirely voluntary, lack of adoption will clearly indicate a failed experiment.
 Understanding the reasons for lack of adoption may prove helpful should any further experiments of this sort be undertaken.
 
 # Security Considerations
 
-TODO Security
-
+This document does not alter the inherent security posture of SRv6 ({{?RFC8402}}, {{?RFC8574}}).
+The SID space prefix was allocated to improve ease of filtering.
+Where SRv6 traffic using these prefixes may be shared with cooperating partner networks,
+this proposal makes it easier to craft filters that permit only SRv6 traffic from identified ASNs.
 
 # IANA Considerations
 
