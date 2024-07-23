@@ -97,7 +97,7 @@ Understanding the reasons for lack of adoption may prove helpful should any furt
 
 # Security Considerations
 
-This document does not alter the inherent security posture of SRv6 ({{?RFC8402}}, {{?RFC8574}}).
+This document does not alter the inherent security posture of SRv6 ({{?RFC8402}}, {{?RFC8754}}).
 The SID space prefix was allocated to improve ease of filtering.
 Where SRv6 traffic using these prefixes may be shared with cooperating partner networks,
 this proposal makes it easier to craft filters that permit only SRv6 traffic from identified ASNs.
