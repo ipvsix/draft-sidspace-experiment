@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2024-07-21T00:59:39.156380+00:00",
+  "timestamp": "2024-07-23T00:55:51.755259+00:00",
   "repo": "ipvsix/draft-sidspace-experiment",
   "labels": [
     {
@@ -75,6 +75,62 @@
       "mergedBy": "ekline",
       "mergeCommit": {
         "oid": "0e342cdd81b40ee8c9b24ff41acf2808bffd7718"
+      },
+      "comments": [],
+      "reviews": []
+    },
+    {
+      "number": 2,
+      "id": "PR_kwDOL914os52Ja3z",
+      "title": "Try moving doc to srv6ops",
+      "url": "https://github.com/ipvsix/draft-sidspace-experiment/pull/2",
+      "state": "MERGED",
+      "author": "ekline",
+      "authorAssociation": "CONTRIBUTOR",
+      "assignees": [],
+      "labels": [],
+      "body": "",
+      "createdAt": "2024-07-22T22:58:06Z",
+      "updatedAt": "2024-07-22T23:01:05Z",
+      "baseRepository": "ipvsix/draft-sidspace-experiment",
+      "baseRefName": "main",
+      "baseRefOid": "46d46259aa4c2749e7450b316deb757bc78f5db8",
+      "headRepository": "ipvsix/draft-sidspace-experiment",
+      "headRefName": "draft",
+      "headRefOid": "400612182c1c0e91002e7d1e27ba421af5e4ef46",
+      "closedAt": "2024-07-22T23:01:05Z",
+      "mergedAt": "2024-07-22T23:01:05Z",
+      "mergedBy": "ekline",
+      "mergeCommit": {
+        "oid": "43aacd57095b08df2b26d4aab0853ceab0570f4f"
+      },
+      "comments": [],
+      "reviews": []
+    },
+    {
+      "number": 3,
+      "id": "PR_kwDOL914os52JpuI",
+      "title": "More migration to srv6ops",
+      "url": "https://github.com/ipvsix/draft-sidspace-experiment/pull/3",
+      "state": "MERGED",
+      "author": "ekline",
+      "authorAssociation": "CONTRIBUTOR",
+      "assignees": [],
+      "labels": [],
+      "body": "",
+      "createdAt": "2024-07-22T23:55:52Z",
+      "updatedAt": "2024-07-23T00:24:40Z",
+      "baseRepository": "ipvsix/draft-sidspace-experiment",
+      "baseRefName": "main",
+      "baseRefOid": "43aacd57095b08df2b26d4aab0853ceab0570f4f",
+      "headRepository": "ipvsix/draft-sidspace-experiment",
+      "headRefName": "draft",
+      "headRefOid": "301e8c55c25ac3ae2307a72b6a3622078b69e754",
+      "closedAt": "2024-07-23T00:24:26Z",
+      "mergedAt": "2024-07-23T00:24:26Z",
+      "mergedBy": "ekline",
+      "mergeCommit": {
+        "oid": "498913ec1406fbbcd29b16b042eff5dff4889ea9"
       },
       "comments": [],
       "reviews": []
