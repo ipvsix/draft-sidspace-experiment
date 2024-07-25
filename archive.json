@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2024-07-23T00:55:51.755259+00:00",
+  "timestamp": "2024-07-25T00:55:58.351990+00:00",
   "repo": "ipvsix/draft-sidspace-experiment",
   "labels": [
     {
@@ -134,6 +134,48 @@
       },
       "comments": [],
       "reviews": []
+    },
+    {
+      "number": 4,
+      "id": "PR_kwDOL914os52YDcD",
+      "title": "First pass edits and editorial suggestions.",
+      "url": "https://github.com/ipvsix/draft-sidspace-experiment/pull/4",
+      "state": "MERGED",
+      "author": "buraglio",
+      "authorAssociation": "COLLABORATOR",
+      "assignees": [],
+      "labels": [],
+      "body": "I didn't populate the prefix examples yet, but I corrected the references and did some other simple stuff. ",
+      "createdAt": "2024-07-24T18:29:25Z",
+      "updatedAt": "2024-07-24T18:35:16Z",
+      "baseRepository": "ipvsix/draft-sidspace-experiment",
+      "baseRefName": "main",
+      "baseRefOid": "e65477c5d63f0b37f8f02de13b559caa59d6d90e",
+      "headRepository": "ipvsix/draft-sidspace-experiment",
+      "headRefName": "buraglio-1stpass-edits",
+      "headRefOid": "8088d059592e010ce30024806a1d7acdb23bc0e4",
+      "closedAt": "2024-07-24T18:35:16Z",
+      "mergedAt": "2024-07-24T18:35:16Z",
+      "mergedBy": "ekline",
+      "mergeCommit": {
+        "oid": "52a996aef0617f8f1a0b9178ffaf2ff8b5c7e397"
+      },
+      "comments": [],
+      "reviews": [
+        {
+          "id": "PRR_kwDOL914os6C-yMi",
+          "commit": {
+            "abbreviatedOid": "8088d05"
+          },
+          "author": "ekline",
+          "authorAssociation": "CONTRIBUTOR",
+          "state": "APPROVED",
+          "body": ":pray: \r\n\r\nLooks great!",
+          "createdAt": "2024-07-24T18:35:03Z",
+          "updatedAt": "2024-07-24T18:35:03Z",
+          "comments": []
+        }
+      ]
     }
   ]
 }
