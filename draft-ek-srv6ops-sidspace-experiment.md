@@ -89,11 +89,11 @@ Using 16-bit and 32-bit ASNs reserved for documentation purposes [IANA-ASNs] yie
 These prefixes presently include ASNs in the range of 64496-64511 as defined in [RFC5398]:
 
 ~~~~~~
-5f00:6449:6:6449:7::/48
+5f00:0:fbf0::/48
 ...
-5f00:6451:0:6451:1::/48
+5f00:0:fbff::/48
 ...
-5f00:6451:0:4294:9672:94::/48
+5f00:0:fbfe::/48
 ~~~~~~
 
 Or any combination thereof.
@@ -102,18 +102,21 @@ It should be noted that 32-but ASNs do not have a specific range dedicated for d
 
 ## SRv6 SID Private Use Prefixes
 
-Using 16-bit and 32-bit ASNs reserved for private use purposes [IANA-ASNs] and defined by [yields several SRv6 SID prefixes for private use.
+Using 16-bit and 32-bit ASNs reserved for private use purposes [IANA-ASNs] and defined by yields several SRv6 SID prefixes for private use.
 These prefixes are defined by RFC 6996 and presently include:
 
 64512-65534 16-bit
 4200000000-4294967294 32-bit
 
 ~~~~~~
-5f00:6451:2:6553:4::/48
+5f00:0:fc00::/48
 ...
-5f00:4200:0000:00:4294:9672:94::/48
+5f00:fa56:ea00::/48
+...
+5f00:ffff:fffe::/48
 ~~~~~~
-Or any combination thereof
+
+Or any combination thereof.
 
 # Evaluating the Experiment
 
@@ -135,7 +138,6 @@ this proposal makes it easier to craft filters that permit only SRv6 traffic fro
 # IANA Considerations
 
 This document has no IANA actions.
-
 
 --- back
 
