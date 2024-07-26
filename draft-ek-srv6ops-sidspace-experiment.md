@@ -83,7 +83,11 @@ As a point of historical interest, this proposal contains echos of the structure
 The recommendation of this specification is for SRv6 domains to allocate SIDs from prefixes that are concatenations of the SRv6 SID prefix (5f00::/16) and an applicable ASN.
 Assuming 32-bit ASNs, this yields a /48 per ASN in use within an SRv6 domain, i.e. 5f00:as.hi16:as.lo16::/48.
 
-## SRv6 SID Documentation Prefixes
+## Generation of ASN derived SRv6 prefix SID
+
+Each unique ASN generates a prefix from the IANA allocation by converting mutually agreed upon ASNs to hexidecimal, and inserting this hex into a /48 prefix.
+
+### SRv6 SID Documentation Prefixes
 
 Using 16-bit and 32-bit ASNs reserved for documentation purposes [IANA-ASNs] yields several SRv6 SID prefixes that might be used for SRv6 documentation purposes.
 These prefixes presently include ASNs in the range of 64496-64511 as defined in [RFC5398]:
@@ -100,7 +104,7 @@ Or any combination thereof.
 
 It should be noted that 32-but ASNs do not have a specific range dedicated for documentation but do have a private use block as defined in [RFC6996].
 
-## SRv6 SID Private Use Prefixes
+### SRv6 SID Private Use Prefixes
 
 Using 16-bit and 32-bit ASNs reserved for private use purposes [IANA-ASNs] and defined by yields several SRv6 SID prefixes for private use.
 These prefixes are defined by RFC 6996 and presently include:
@@ -117,6 +121,31 @@ These prefixes are defined by RFC 6996 and presently include:
 ~~~~~~
 
 Or any combination thereof.
+
+# Example test case
+
+One possible test case is the exchange of the IPv6 prefix SID between two autonomous systems with independent management domains. In this example, AS4294967294 exchanges their SRv6 SID prefix (5f00:ffff:fffe::/48) with AS4200000000 who announces their ASN derived SRv6 SID prefix (5f00:fa56:ea00::/48).
+~~~~~~
+  ┌─────────────────────────────────┐           ┌──────────────────────────────────┐  
+  │                                 │           │                                  │  
+  │                                 │           │                                  │  
+  │                  eBGP speaker   │           │   eBGP speaker                   │  
+  │           5f00:ffff:fffe::/48   │           │   5f00:fa56:ea00::/48            │  
+  │   ┌─────┐               ┌────┐  │           │  ┌────┐                ┌─────┐   │  
+  │   │     ├──────┐        │    ├──┼───────────┼──┤    │        ┌───────┤     │   │  
+  │   │     │      │        │    │  │           │  │    │        │       │     │   │  
+  │   └─────┘   ┌──┴──┐     └─┬──┘  │           │  └──┬─┘     ┌──┴──┐    └─────┘   │  
+  │             │     │       │     │           │     │       │     │              │  
+  │             │     ├───────┘     │           │     └───────┤     │              │  
+  │             └─────┘             │           │             └─────┘              │  
+  │                                 │           │                                  │  
+  │                                 │           │                                  │  
+  │                                 │           │                                  │  
+  │ AS4294967294                    │           │                      AS4200000000│  
+  └─────────────────────────────────┘           └──────────────────────────────────┘  
+~~~~~~
+
+Within this structure, appropriate and agreed upon policy may be shared between the partner ASNs. Defining the policy or use cases is outside of the scope of this document.
 
 # Evaluating the Experiment
 
