@@ -42,13 +42,13 @@ normative:
   IANA-ASNs:
     target: https://www.iana.org/assignments/as-numbers/as-numbers.xhtml
     title: "Autonomous System (AS) Numbers"
-  RFC6996:
 
 informative:
   RFC1897:
   RFC8402:
   RFC8754:
   RFC5398:
+  RFC6996:
 
 --- abstract
 
@@ -86,16 +86,37 @@ Assuming 32-bit ASNs, this yields a /48 per ASN in use within an SRv6 domain, i.
 ## SRv6 SID Documentation Prefixes
 
 Using 16-bit and 32-bit ASNs reserved for documentation purposes [IANA-ASNs] yields several SRv6 SID prefixes that might be used for SRv6 documentation purposes.
-These prefixes presently include:
+These prefixes presently include ASNs in the range of 64496-64511 as defined in [RFC5398]:
+
+~~~~~~
+5f00:0:fbf0::/48
 ...
-\[include references from\] [RFC5398].
+5f00:0:fbff::/48
+...
+5f00:0:fbfe::/48
+~~~~~~
+
+Or any combination thereof.
+
+It should be noted that 32-but ASNs do not have a specific range dedicated for documentation but do have a private use block as defined in [RFC6996].
 
 ## SRv6 SID Private Use Prefixes
 
-Using 16-bit and 32-bit ASNs reserved for private use purposes [IANA-ASNs] yields several SRv6 SID prefixes for private use.
-These prefixes presently include:
+Using 16-bit and 32-bit ASNs reserved for private use purposes [IANA-ASNs] and defined by yields several SRv6 SID prefixes for private use.
+These prefixes are defined by RFC 6996 and presently include:
+
+64512-65534 16-bit
+4200000000-4294967294 32-bit
+
+~~~~~~
+5f00:0:fc00::/48
 ...
-\[include references from\] [RFC6996].
+5f00:fa56:ea00::/48
+...
+5f00:ffff:fffe::/48
+~~~~~~
+
+Or any combination thereof.
 
 # Evaluating the Experiment
 
@@ -117,7 +138,6 @@ this proposal makes it easier to craft filters that permit only SRv6 traffic fro
 # IANA Considerations
 
 This document has no IANA actions.
-
 
 --- back
 
