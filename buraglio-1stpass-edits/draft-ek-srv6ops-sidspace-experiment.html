@@ -1033,7 +1033,7 @@ svg :is([fill="white"], [fill^="#fff"]) {
 </tr></thead>
 <tfoot><tr>
 <td class="left">Kline &amp; Buraglio</td>
-<td class="center">Expires 25 January 2025</td>
+<td class="center">Expires 27 January 2025</td>
 <td class="right">[Page]</td>
 </tr></tfoot>
 </table>
@@ -1046,12 +1046,12 @@ svg :is([fill="white"], [fill^="#fff"]) {
 <dd class="internet-draft">draft-ek-srv6ops-sidspace-experiment-latest</dd>
 <dt class="label-published">Published:</dt>
 <dd class="published">
-<time datetime="2024-07-24" class="published">24 July 2024</time>
+<time datetime="2024-07-26" class="published">26 July 2024</time>
     </dd>
 <dt class="label-intended-status">Intended Status:</dt>
 <dd class="intended-status">Experimental</dd>
 <dt class="label-expires">Expires:</dt>
-<dd class="expires"><time datetime="2025-01-25">25 January 2025</time></dd>
+<dd class="expires"><time datetime="2025-01-27">27 January 2025</time></dd>
 <dt class="label-authors">Authors:</dt>
 <dd class="authors">
 <div class="author">
@@ -1108,7 +1108,7 @@ The goal of this experiment is to aid SRv6 operations while preserving the abili
         time. It is inappropriate to use Internet-Drafts as reference
         material or to cite them other than as "work in progress."<a href="#section-boilerplate.1-3" class="pilcrow">¶</a></p>
 <p id="section-boilerplate.1-4">
-        This Internet-Draft will expire on 25 January 2025.<a href="#section-boilerplate.1-4" class="pilcrow">¶</a></p>
+        This Internet-Draft will expire on 27 January 2025.<a href="#section-boilerplate.1-4" class="pilcrow">¶</a></p>
 </section>
 </div>
 <div id="copyright">
@@ -1212,9 +1212,18 @@ Assuming 32-bit ASNs, this yields a /48 per ASN in use within an SRv6 domain, i.
 <a href="#section-2.1" class="section-number selfRef">2.1. </a><a href="#name-srv6-sid-documentation-pref" class="section-name selfRef">SRv6 SID Documentation Prefixes</a>
         </h3>
 <p id="section-2.1-1">Using 16-bit and 32-bit ASNs reserved for documentation purposes <span>[<a href="#IANA-ASNs" class="cite xref">IANA-ASNs</a>]</span> yields several SRv6 SID prefixes that might be used for SRv6 documentation purposes.
-These prefixes presently include:
+These prefixes presently include ASNs in the range of 64496-64511 as defined in <span>[<a href="#RFC5398" class="cite xref">RFC5398</a>]</span>:<a href="#section-2.1-1" class="pilcrow">¶</a></p>
+<div class="alignLeft art-text artwork" id="section-2.1-2">
+<pre>
+5f00:0:fbf0::/48
 ...
-[include references from] <span>[<a href="#RFC5398" class="cite xref">RFC5398</a>]</span>.<a href="#section-2.1-1" class="pilcrow">¶</a></p>
+5f00:0:fbff::/48
+...
+5f00:0:fbfe::/48
+</pre><a href="#section-2.1-2" class="pilcrow">¶</a>
+</div>
+<p id="section-2.1-3">Or any combination thereof.<a href="#section-2.1-3" class="pilcrow">¶</a></p>
+<p id="section-2.1-4">It should be noted that 32-but ASNs do not have a specific range dedicated for documentation but do have a private use block as defined in <span>[<a href="#RFC6996" class="cite xref">RFC6996</a>]</span>.<a href="#section-2.1-4" class="pilcrow">¶</a></p>
 </section>
 </div>
 <div id="srv6-sid-private-use-prefixes">
@@ -1222,10 +1231,20 @@ These prefixes presently include:
         <h3 id="name-srv6-sid-private-use-prefix">
 <a href="#section-2.2" class="section-number selfRef">2.2. </a><a href="#name-srv6-sid-private-use-prefix" class="section-name selfRef">SRv6 SID Private Use Prefixes</a>
         </h3>
-<p id="section-2.2-1">Using 16-bit and 32-bit ASNs reserved for private use purposes <span>[<a href="#IANA-ASNs" class="cite xref">IANA-ASNs</a>]</span> yields several SRv6 SID prefixes for private use.
-These prefixes presently include:
+<p id="section-2.2-1">Using 16-bit and 32-bit ASNs reserved for private use purposes <span>[<a href="#IANA-ASNs" class="cite xref">IANA-ASNs</a>]</span> and defined by yields several SRv6 SID prefixes for private use.
+These prefixes are defined by RFC 6996 and presently include:<a href="#section-2.2-1" class="pilcrow">¶</a></p>
+<p id="section-2.2-2">64512-65534 16-bit
+4200000000-4294967294 32-bit<a href="#section-2.2-2" class="pilcrow">¶</a></p>
+<div class="alignLeft art-text artwork" id="section-2.2-3">
+<pre>
+5f00:0:fc00::/48
 ...
-[include references from] <span>[<a href="#RFC6996" class="cite xref">RFC6996</a>]</span>.<a href="#section-2.2-1" class="pilcrow">¶</a></p>
+5f00:fa56:ea00::/48
+...
+5f00:ffff:fffe::/48
+</pre><a href="#section-2.2-3" class="pilcrow">¶</a>
+</div>
+<p id="section-2.2-4">Or any combination thereof.<a href="#section-2.2-4" class="pilcrow">¶</a></p>
 </section>
 </div>
 </section>
@@ -1281,12 +1300,8 @@ this proposal makes it easier to craft filters that permit only SRv6 traffic fro
 <span class="refTitle">"Autonomous System (AS) Numbers"</span>, <span>n.d.</span>, <span>&lt;<a href="https://www.iana.org/assignments/as-numbers/as-numbers.xhtml">https://www.iana.org/assignments/as-numbers/as-numbers.xhtml</a>&gt;</span>. </dd>
 <dd class="break"></dd>
 <dt id="IANA-IPv6Special">[IANA-IPv6Special]</dt>
-        <dd>
-<span class="refTitle">"IANA IPv6 Special-Purpose Address Registry"</span>, <span>n.d.</span>, <span>&lt;<a href="https://www.iana.org/assignments/iana-ipv6-special-registry/iana-ipv6-special-registry.xhtml">https://www.iana.org/assignments/iana-ipv6-special-registry/iana-ipv6-special-registry.xhtml</a>&gt;</span>. </dd>
-<dd class="break"></dd>
-<dt id="RFC6996">[RFC6996]</dt>
       <dd>
-<span class="refAuthor">Mitchell, J.</span>, <span class="refTitle">"Autonomous System (AS) Reservation for Private Use"</span>, <span class="seriesInfo">BCP 6</span>, <span class="seriesInfo">RFC 6996</span>, <span class="seriesInfo">DOI 10.17487/RFC6996</span>, <time datetime="2013-07" class="refDate">July 2013</time>, <span>&lt;<a href="https://www.rfc-editor.org/rfc/rfc6996">https://www.rfc-editor.org/rfc/rfc6996</a>&gt;</span>. </dd>
+<span class="refTitle">"IANA IPv6 Special-Purpose Address Registry"</span>, <span>n.d.</span>, <span>&lt;<a href="https://www.iana.org/assignments/iana-ipv6-special-registry/iana-ipv6-special-registry.xhtml">https://www.iana.org/assignments/iana-ipv6-special-registry/iana-ipv6-special-registry.xhtml</a>&gt;</span>. </dd>
 <dd class="break"></dd>
 </dl>
 </section>
@@ -1304,6 +1319,10 @@ this proposal makes it easier to craft filters that permit only SRv6 traffic fro
 <dt id="RFC5398">[RFC5398]</dt>
         <dd>
 <span class="refAuthor">Huston, G.</span>, <span class="refTitle">"Autonomous System (AS) Number Reservation for Documentation Use"</span>, <span class="seriesInfo">RFC 5398</span>, <span class="seriesInfo">DOI 10.17487/RFC5398</span>, <time datetime="2008-12" class="refDate">December 2008</time>, <span>&lt;<a href="https://www.rfc-editor.org/rfc/rfc5398">https://www.rfc-editor.org/rfc/rfc5398</a>&gt;</span>. </dd>
+<dd class="break"></dd>
+<dt id="RFC6996">[RFC6996]</dt>
+        <dd>
+<span class="refAuthor">Mitchell, J.</span>, <span class="refTitle">"Autonomous System (AS) Reservation for Private Use"</span>, <span class="seriesInfo">BCP 6</span>, <span class="seriesInfo">RFC 6996</span>, <span class="seriesInfo">DOI 10.17487/RFC6996</span>, <time datetime="2013-07" class="refDate">July 2013</time>, <span>&lt;<a href="https://www.rfc-editor.org/rfc/rfc6996">https://www.rfc-editor.org/rfc/rfc6996</a>&gt;</span>. </dd>
 <dd class="break"></dd>
 <dt id="RFC8402">[RFC8402]</dt>
         <dd>
