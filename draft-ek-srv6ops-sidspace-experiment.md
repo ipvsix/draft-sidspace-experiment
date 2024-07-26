@@ -126,23 +126,23 @@ Or any combination thereof.
 
 One possible test case is the exchange of the IPv6 prefix SID between two autonomous systems with independent management domains. In this example, AS4294967294 exchanges their SRv6 SID prefix (5f00:ffff:fffe::/48) with AS4200000000 who announces their ASN derived SRv6 SID prefix (5f00:fa56:ea00::/48).
 ~~~~~~
-  ┌─────────────────────────────────┐           ┌──────────────────────────────────┐  
-  │                                 │           │                                  │  
-  │                                 │           │                                  │  
-  │                  eBGP speaker   │           │   eBGP speaker                   │  
-  │           5f00:ffff:fffe::/48   │           │   5f00:fa56:ea00::/48            │  
-  │   ┌─────┐               ┌────┐  │           │  ┌────┐                ┌─────┐   │  
-  │   │     ├──────┐        │    ├──┼───────────┼──┤    │        ┌───────┤     │   │  
-  │   │     │      │        │    │  │           │  │    │        │       │     │   │  
-  │   └─────┘   ┌──┴──┐     └─┬──┘  │           │  └──┬─┘     ┌──┴──┐    └─────┘   │  
-  │             │     │       │     │           │     │       │     │              │  
-  │             │     ├───────┘     │           │     └───────┤     │              │  
-  │             └─────┘             │           │             └─────┘              │  
-  │                                 │           │                                  │  
-  │                                 │           │                                  │  
-  │                                 │           │                                  │  
-  │ AS4294967294                    │           │                      AS4200000000│  
-  └─────────────────────────────────┘           └──────────────────────────────────┘  
+  ┌─────────────────────────────────┐           ┌──────────────────────────────────┐
+  │                                 │           │                                  │
+  │                                 │           │                                  │
+  │                  eBGP speaker   │           │   eBGP speaker                   │
+  │           5f00:ffff:fffe::/48   │           │   5f00:fa56:ea00::/48            │
+  │   ┌─────┐               ┌────┐  │           │  ┌────┐                ┌─────┐   │
+  │   │     ├──────┐        │    ├──┼───────────┼──┤    │        ┌───────┤     │   │
+  │   │     │      │        │    │  │           │  │    │        │       │     │   │
+  │   └─────┘   ┌──┴──┐     └─┬──┘  │           │  └──┬─┘     ┌──┴──┐    └─────┘   │
+  │             │     │       │     │           │     │       │     │              │
+  │             │     ├───────┘     │           │     └───────┤     │              │
+  │             └─────┘             │           │             └─────┘              │
+  │                                 │           │                                  │
+  │                                 │           │                                  │
+  │                                 │           │                                  │
+  │ AS4294967294                    │           │                      AS4200000000│
+  └─────────────────────────────────┘           └──────────────────────────────────┘
 ~~~~~~
 
 Within this structure, appropriate and agreed upon policy may be shared between the partner ASNs. Defining the policy or use cases is outside of the scope of this document.
