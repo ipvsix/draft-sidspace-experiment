@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2024-07-25T00:55:58.351990+00:00",
+  "timestamp": "2024-07-28T00:59:57.797413+00:00",
   "repo": "ipvsix/draft-sidspace-experiment",
   "labels": [
     {
@@ -174,6 +174,155 @@
           "createdAt": "2024-07-24T18:35:03Z",
           "updatedAt": "2024-07-24T18:35:03Z",
           "comments": []
+        }
+      ]
+    },
+    {
+      "number": 5,
+      "id": "PR_kwDOL914os52hR7G",
+      "title": "Add some examples.",
+      "url": "https://github.com/ipvsix/draft-sidspace-experiment/pull/5",
+      "state": "MERGED",
+      "author": "buraglio",
+      "authorAssociation": "COLLABORATOR",
+      "assignees": [],
+      "labels": [],
+      "body": "I added some basic examples. there may be some questions about address compression where all zeroes exist, not sure if that is an issue that we should address or not. ",
+      "createdAt": "2024-07-25T22:38:00Z",
+      "updatedAt": "2024-07-26T21:05:24Z",
+      "baseRepository": "ipvsix/draft-sidspace-experiment",
+      "baseRefName": "buraglio-1stpass-edits",
+      "baseRefOid": "8088d059592e010ce30024806a1d7acdb23bc0e4",
+      "headRepository": "ipvsix/draft-sidspace-experiment",
+      "headRefName": "buraglio-secondpass-edits",
+      "headRefOid": "7604494f5b23667f4a39c61463b9ce8b168a5e06",
+      "closedAt": "2024-07-26T19:16:27Z",
+      "mergedAt": "2024-07-26T19:16:27Z",
+      "mergedBy": "ekline",
+      "mergeCommit": {
+        "oid": "7e1b425958452c595900e76b9ae790b12ec150e5"
+      },
+      "comments": [
+        {
+          "author": "buraglio",
+          "authorAssociation": "COLLABORATOR",
+          "body": "I agree. I am planning to think on this a bit more and maybe add some suggestions once I am back from summer holiday.",
+          "createdAt": "2024-07-26T21:05:23Z",
+          "updatedAt": "2024-07-26T21:05:23Z"
+        }
+      ],
+      "reviews": [
+        {
+          "id": "PRR_kwDOL914os6DLBrJ",
+          "commit": {
+            "abbreviatedOid": "b322813"
+          },
+          "author": "ekline",
+          "authorAssociation": "CONTRIBUTOR",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2024-07-26T01:04:32Z",
+          "updatedAt": "2024-07-26T01:05:16Z",
+          "comments": [
+            {
+              "originalPosition": 23,
+              "body": "I think these need to be hex, not decimal in a hex context.\r\n\r\n* `5f00:0:fbf0::/48`\r\n* `5f00:0:fbff::/48`\r\n\r\n",
+              "createdAt": "2024-07-26T01:04:32Z",
+              "updatedAt": "2024-07-26T01:05:16Z"
+            },
+            {
+              "originalPosition": 23,
+              "body": "likewise for the other ranges",
+              "createdAt": "2024-07-26T01:05:12Z",
+              "updatedAt": "2024-07-26T01:05:16Z"
+            }
+          ]
+        },
+        {
+          "id": "PRR_kwDOL914os6DLHO1",
+          "commit": {
+            "abbreviatedOid": "b322813"
+          },
+          "author": "buraglio",
+          "authorAssociation": "COLLABORATOR",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2024-07-26T01:37:27Z",
+          "updatedAt": "2024-07-26T01:37:27Z",
+          "comments": [
+            {
+              "originalPosition": 23,
+              "body": "Oh, duh. that makes a lot more sense. I'll fix that. ",
+              "createdAt": "2024-07-26T01:37:27Z",
+              "updatedAt": "2024-07-26T01:37:27Z"
+            }
+          ]
+        },
+        {
+          "id": "PRR_kwDOL914os6DSN77",
+          "commit": {
+            "abbreviatedOid": "7604494"
+          },
+          "author": "ekline",
+          "authorAssociation": "CONTRIBUTOR",
+          "state": "APPROVED",
+          "body": "I think there's bit of tweaking might yet do, but this great, thank you.",
+          "createdAt": "2024-07-26T19:16:18Z",
+          "updatedAt": "2024-07-26T19:16:18Z",
+          "comments": []
+        }
+      ]
+    },
+    {
+      "number": 6,
+      "id": "PR_kwDOL914os52nyHH",
+      "title": "Buraglio secondpass edits",
+      "url": "https://github.com/ipvsix/draft-sidspace-experiment/pull/6",
+      "state": "OPEN",
+      "author": "buraglio",
+      "authorAssociation": "COLLABORATOR",
+      "assignees": [],
+      "labels": [],
+      "body": "Had some time in the airport. Added some more suggestions. ",
+      "createdAt": "2024-07-26T21:34:29Z",
+      "updatedAt": "2024-07-27T03:58:51Z",
+      "baseRepository": "ipvsix/draft-sidspace-experiment",
+      "baseRefName": "main",
+      "baseRefOid": "52a996aef0617f8f1a0b9178ffaf2ff8b5c7e397",
+      "headRepository": "ipvsix/draft-sidspace-experiment",
+      "headRefName": "buraglio-secondpass-edits",
+      "headRefOid": "e44efa6bf3ff3557148d395eddd69fa8f18d6c71",
+      "closedAt": null,
+      "mergedAt": null,
+      "mergedBy": null,
+      "mergeCommit": null,
+      "comments": [],
+      "reviews": [
+        {
+          "id": "PRR_kwDOL914os6DT63M",
+          "commit": {
+            "abbreviatedOid": "e44efa6"
+          },
+          "author": "ekline",
+          "authorAssociation": "CONTRIBUTOR",
+          "state": "APPROVED",
+          "body": "Just a few nits.",
+          "createdAt": "2024-07-27T03:55:45Z",
+          "updatedAt": "2024-07-27T03:58:51Z",
+          "comments": [
+            {
+              "originalPosition": 36,
+              "body": "I'm unclear on the list here; why is this `fbfe` element after the `fbff` one?",
+              "createdAt": "2024-07-27T03:55:45Z",
+              "updatedAt": "2024-07-27T03:58:51Z"
+            },
+            {
+              "originalPosition": 36,
+              "body": "oh, I think this should be `fffe` and in the experimental list further down?",
+              "createdAt": "2024-07-27T03:58:05Z",
+              "updatedAt": "2024-07-27T03:58:51Z"
+            }
+          ]
         }
       ]
     }
