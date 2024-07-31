@@ -1232,11 +1232,9 @@ These prefixes presently include ASNs in the range of 64496-64511 as defined in 
 5f00:0:fbf0::/48
 ...
 5f00:0:fbff::/48
-...
-5f00:0:fbfe::/48
 </pre><a href="#section-2.1.1-2" class="pilcrow">¶</a>
 </div>
-<p id="section-2.1.1-3">Or any combination thereof.<a href="#section-2.1.1-3" class="pilcrow">¶</a></p>
+<p id="section-2.1.1-3">or any /48 prefix between these.<a href="#section-2.1.1-3" class="pilcrow">¶</a></p>
 <p id="section-2.1.1-4">It should be noted that 32-but ASNs do not have a specific range dedicated for documentation but do have a private use block as defined in <span>[<a href="#RFC6996" class="cite xref">RFC6996</a>]</span>.<a href="#section-2.1.1-4" class="pilcrow">¶</a></p>
 </section>
 </div>
@@ -1247,18 +1245,42 @@ These prefixes presently include ASNs in the range of 64496-64511 as defined in 
           </h4>
 <p id="section-2.1.2-1">Using 16-bit and 32-bit ASNs reserved for private use purposes <span>[<a href="#IANA-ASNs" class="cite xref">IANA-ASNs</a>]</span> and defined by yields several SRv6 SID prefixes for private use.
 These prefixes are defined by RFC 6996 and presently include:<a href="#section-2.1.2-1" class="pilcrow">¶</a></p>
-<p id="section-2.1.2-2">64512-65534 16-bit
-4200000000-4294967294 32-bit<a href="#section-2.1.2-2" class="pilcrow">¶</a></p>
-<div class="alignLeft art-text artwork" id="section-2.1.2-3">
+<table class="center" id="table-1">
+            <caption><a href="#table-1" class="selfRef">Table 1</a></caption>
+<thead>
+              <tr>
+                <th class="text-left" rowspan="1" colspan="1">ASN size</th>
+                <th class="text-left" rowspan="1" colspan="1">Private Use Range</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="text-left" rowspan="1" colspan="1">16-bit</td>
+                <td class="text-left" rowspan="1" colspan="1">64512-65534</td>
+              </tr>
+              <tr>
+                <td class="text-left" rowspan="1" colspan="1">32-bit</td>
+                <td class="text-left" rowspan="1" colspan="1">4200000000-4294967294</td>
+              </tr>
+            </tbody>
+          </table>
+<p id="section-2.1.2-3">yielding:<a href="#section-2.1.2-3" class="pilcrow">¶</a></p>
+<div class="alignLeft art-text artwork" id="section-2.1.2-4">
 <pre>
 5f00:0:fc00::/48
 ...
+5f00:0:fffe::/48
+</pre><a href="#section-2.1.2-4" class="pilcrow">¶</a>
+</div>
+<p id="section-2.1.2-5">and<a href="#section-2.1.2-5" class="pilcrow">¶</a></p>
+<div class="alignLeft art-text artwork" id="section-2.1.2-6">
+<pre>
 5f00:fa56:ea00::/48
 ...
 5f00:ffff:fffe::/48
-</pre><a href="#section-2.1.2-3" class="pilcrow">¶</a>
+</pre><a href="#section-2.1.2-6" class="pilcrow">¶</a>
 </div>
-<p id="section-2.1.2-4">Or any combination thereof.<a href="#section-2.1.2-4" class="pilcrow">¶</a></p>
+<p id="section-2.1.2-7">or any /48 prefix between these, as private use ASN-derived SID prefixes.<a href="#section-2.1.2-7" class="pilcrow">¶</a></p>
 </section>
 </div>
 </section>
@@ -1270,8 +1292,9 @@ These prefixes are defined by RFC 6996 and presently include:<a href="#section-2
       <h2 id="name-example-test-case">
 <a href="#section-3" class="section-number selfRef">3. </a><a href="#name-example-test-case" class="section-name selfRef">Example test case</a>
       </h2>
-<p id="section-3-1">One possible test case is the exchange of the IPv6 prefix SID between two autonomous systems with independent management domains. In this example, AS4294967294 exchanges their SRv6 SID prefix (5f00:ffff:fffe::/48) with AS4200000000 who announces their ASN derived SRv6 SID prefix (5f00:fa56:ea00::/48).
-~~~~~~
+<p id="section-3-1">One possible test case is the exchange of the IPv6 prefix SID between two autonomous systems with independent management domains. In this example, AS4294967294 exchanges their SRv6 SID prefix (5f00:ffff:fffe::/48) with AS4200000000 who announces their ASN derived SRv6 SID prefix (5f00:fa56:ea00::/48).<a href="#section-3-1" class="pilcrow">¶</a></p>
+<div class="alignLeft art-text artwork" id="section-3-2">
+<pre>
   ┌─────────────────────────────────┐           ┌──────────────────────────────────┐
   │                                 │           │                                  │
   │                                 │           │                                  │
@@ -1289,8 +1312,9 @@ These prefixes are defined by RFC 6996 and presently include:<a href="#section-2
   │                                 │           │                                  │
   │ AS4294967294                    │           │                      AS4200000000│
   └─────────────────────────────────┘           └──────────────────────────────────┘
-~~~~~~<a href="#section-3-1" class="pilcrow">¶</a></p>
-<p id="section-3-2">Within this structure, appropriate and agreed upon policy may be shared between the partner ASNs. Defining the policy or use cases is outside of the scope of this document.<a href="#section-3-2" class="pilcrow">¶</a></p>
+</pre><a href="#section-3-2" class="pilcrow">¶</a>
+</div>
+<p id="section-3-3">Within this structure, appropriate and agreed upon policy may be shared between the partner ASNs. Defining the policy or use cases is outside of the scope of this document.<a href="#section-3-3" class="pilcrow">¶</a></p>
 </section>
 </div>
 <div id="evaluating-the-experiment">
