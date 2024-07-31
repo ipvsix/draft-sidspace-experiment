@@ -96,11 +96,9 @@ These prefixes presently include ASNs in the range of 64496-64511 as defined in 
 5f00:0:fbf0::/48
 ...
 5f00:0:fbff::/48
-...
-5f00:0:fbfe::/48
 ~~~~~~
 
-Or any combination thereof.
+or any /48 prefix between these.
 
 It should be noted that 32-but ASNs do not have a specific range dedicated for documentation but do have a private use block as defined in [RFC6996].
 
@@ -109,22 +107,33 @@ It should be noted that 32-but ASNs do not have a specific range dedicated for d
 Using 16-bit and 32-bit ASNs reserved for private use purposes [IANA-ASNs] and defined by yields several SRv6 SID prefixes for private use.
 These prefixes are defined by RFC 6996 and presently include:
 
-64512-65534 16-bit
-4200000000-4294967294 32-bit
+| ASN size | Private Use Range     |
+|----------|-----------------------|
+| 16-bit   | 64512-65534           |
+| 32-bit   | 4200000000-4294967294 |
+
+yielding:
 
 ~~~~~~
 5f00:0:fc00::/48
 ...
+5f00:0:fffe::/48
+~~~~~~
+
+and
+
+~~~~~~
 5f00:fa56:ea00::/48
 ...
 5f00:ffff:fffe::/48
 ~~~~~~
 
-Or any combination thereof.
+or any /48 prefix between these, as private use ASN-derived SID prefixes.
 
 # Example test case
 
 One possible test case is the exchange of the IPv6 prefix SID between two autonomous systems with independent management domains. In this example, AS4294967294 exchanges their SRv6 SID prefix (5f00:ffff:fffe::/48) with AS4200000000 who announces their ASN derived SRv6 SID prefix (5f00:fa56:ea00::/48).
+
 ~~~~~~
   ┌─────────────────────────────────┐           ┌──────────────────────────────────┐
   │                                 │           │                                  │
