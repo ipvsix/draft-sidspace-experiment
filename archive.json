@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2024-07-30T00:55:57.001057+00:00",
+  "timestamp": "2024-08-01T01:00:54.933254+00:00",
   "repo": "ipvsix/draft-sidspace-experiment",
   "labels": [
     {
@@ -278,24 +278,26 @@
       "id": "PR_kwDOL914os52nyHH",
       "title": "Buraglio secondpass edits",
       "url": "https://github.com/ipvsix/draft-sidspace-experiment/pull/6",
-      "state": "OPEN",
+      "state": "MERGED",
       "author": "buraglio",
       "authorAssociation": "COLLABORATOR",
       "assignees": [],
       "labels": [],
       "body": "Had some time in the airport. Added some more suggestions. ",
       "createdAt": "2024-07-26T21:34:29Z",
-      "updatedAt": "2024-07-27T03:58:51Z",
+      "updatedAt": "2024-07-31T03:57:30Z",
       "baseRepository": "ipvsix/draft-sidspace-experiment",
       "baseRefName": "main",
       "baseRefOid": "52a996aef0617f8f1a0b9178ffaf2ff8b5c7e397",
       "headRepository": "ipvsix/draft-sidspace-experiment",
       "headRefName": "buraglio-secondpass-edits",
       "headRefOid": "e44efa6bf3ff3557148d395eddd69fa8f18d6c71",
-      "closedAt": null,
-      "mergedAt": null,
-      "mergedBy": null,
-      "mergeCommit": null,
+      "closedAt": "2024-07-31T03:57:30Z",
+      "mergedAt": "2024-07-31T03:57:30Z",
+      "mergedBy": "ekline",
+      "mergeCommit": {
+        "oid": "c6aa8376468ba2247df91f7873c42eb810ea0fbd"
+      },
       "comments": [],
       "reviews": [
         {
