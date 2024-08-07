@@ -49,6 +49,10 @@ informative:
   RFC8754:
   RFC5398:
   RFC6996:
+  RFC8799:
+  draft-bdmgct-spring-srv6-security:
+    target: https://datatracker.ietf.org/doc/draft-bdmgct-spring-srv6-security/
+    title: SRv6 Security Considerations
 
 --- abstract
 
@@ -130,6 +134,12 @@ and
 
 or any /48 prefix between these, as private use ASN-derived SID prefixes.
 
+# Routing and Filtering
+
+As noted in [draft-bdmgct-spring-srv6-security], it is assumed that each ASN participating in the SRv6 SID space experiment has deployed their respective SRv6 implementations within a limited domain [RFC8799] with appropriate filtering at the domain boundaries. Because this is a shared space experiment, the requisite filtering exceptions must be made between each limited domain to allow for the desired inter-domain communication to occur. Care should be taken to allow only the desired and necessary communication between each limited domain. The mechanisms used should be conformant with the limited domain security policy and may include, but are not limited to:
+*routing filters such as BGP prefix-lists, route-maps, route-policies, or other analogous mechanisms.
+*access control filters at the domain edge  
+
 # Example test case
 
 One possible test case is the exchange of the IPv6 prefix SID between two autonomous systems with independent management domains. In this example, AS4294967294 exchanges their SRv6 SID prefix (5f00:ffff:fffe::/48) with AS4200000000 who announces their ASN derived SRv6 SID prefix (5f00:fa56:ea00::/48).
@@ -158,13 +168,7 @@ Within this structure, appropriate and agreed upon policy may be shared between 
 
 # Evaluating the Experiment
 
-Evaluation of the results will determine the ease of deployment and operation, or lack thereof and will inform if further work can be performed to improve ease of implementation and operation.
-
-A survey of experiences of those SRv6 domain operators that opted to participate should be undertaken, and results published.
-Feedback highlighting ease of SID allocation or management, improved security through ease of filtering, etc. may all point towards a successful experiment.
-
-As use of the structure proposed here is entirely voluntary, lack of adoption will clearly indicate a failed experiment.
-Understanding the reasons for lack of adoption may prove helpful should any further experiments of this sort be undertaken.
+A survey of participants in the experiment and subsequent evaluation of the results will determine the ease of deployment and operation, or lack thereof, and will inform if further work can be performed to improve ease of implementation and operation.
 
 # Security Considerations
 
