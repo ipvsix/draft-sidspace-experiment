@@ -137,8 +137,8 @@ or any /48 prefix between these, as private use ASN-derived SID prefixes.
 # Routing and Filtering
 
 As noted in [draft-bdmgct-spring-srv6-security], it is assumed that each ASN participating in the SRv6 SID space experiment has deployed their respective SRv6 implementations within a limited domain [RFC8799] with appropriate filtering at the domain boundaries. Because this is a shared space experiment, the requisite filtering exceptions must be made between each limited domain to allow for the desired inter-domain communication to occur. Care should be taken to allow only the desired and necessary communication between each limited domain. The mechanisms used should be conformant with the limited domain security policy and may include, but are not limited to:
-*routing filters such as BGP prefix-lists, route-maps, route-policies, or other analogous mechanisms.
-*access control filters at the domain edge
+* routing filters such as BGP prefix-lists, route-maps, route-policies, or other analogous mechanisms, or
+* access control filters at the domain edge
 
 # Example test case
 
