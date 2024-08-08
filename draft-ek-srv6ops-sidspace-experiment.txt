@@ -193,9 +193,9 @@ Table of Contents
    allow only the desired and necessary communication between each
    limited domain.  The mechanisms used should be conformant with the
    limited domain security policy and may include, but are not limited
-   to: *routing filters such as BGP prefix-lists, route-maps, route-
-   policies, or other analogous mechanisms. *access control filters at
-   the domain edge
+   to: * routing filters such as BGP prefix-lists, route-maps, route-
+   policies, or other analogous mechanisms, or * access control filters
+   at the domain edge
 
 4.  Example test case
 
