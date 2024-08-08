@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2024-08-06T00:56:16.685273+00:00",
+  "timestamp": "2024-08-08T00:56:38.281060+00:00",
   "repo": "ipvsix/draft-sidspace-experiment",
   "labels": [
     {
@@ -327,6 +327,32 @@
           ]
         }
       ]
+    },
+    {
+      "number": 7,
+      "id": "PR_kwDOL914os53u6BM",
+      "title": "Add first pass filtering and routing section, shorten eval section",
+      "url": "https://github.com/ipvsix/draft-sidspace-experiment/pull/7",
+      "state": "OPEN",
+      "author": "buraglio",
+      "authorAssociation": "COLLABORATOR",
+      "assignees": [],
+      "labels": [],
+      "body": "",
+      "createdAt": "2024-08-07T16:11:29Z",
+      "updatedAt": "2024-08-07T16:13:10Z",
+      "baseRepository": "ipvsix/draft-sidspace-experiment",
+      "baseRefName": "main",
+      "baseRefOid": "2f7a8c4ae4f3e368430beee5979aeb6875dc12b3",
+      "headRepository": "ipvsix/draft-sidspace-experiment",
+      "headRefName": "buraglio-thirdpass-edits",
+      "headRefOid": "6d15ed7969e906b0b51928b7fc7263f195c7799f",
+      "closedAt": null,
+      "mergedAt": null,
+      "mergedBy": null,
+      "mergeCommit": null,
+      "comments": [],
+      "reviews": []
     }
   ]
 }
