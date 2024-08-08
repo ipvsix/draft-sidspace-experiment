@@ -1295,9 +1295,15 @@ These prefixes are defined by RFC 6996 and presently include:<a href="#section-2
       <h2 id="name-routing-and-filtering">
 <a href="#section-3" class="section-number selfRef">3. </a><a href="#name-routing-and-filtering" class="section-name selfRef">Routing and Filtering</a>
       </h2>
-<p id="section-3-1">As noted in <span>[<a href="#draft-bdmgct-spring-srv6-security" class="cite xref">draft-bdmgct-spring-srv6-security</a>]</span>, it is assumed that each ASN participating in the SRv6 SID space experiment has deployed their respective SRv6 implementations within a limited domain <span>[<a href="#RFC8799" class="cite xref">RFC8799</a>]</span> with appropriate filtering at the domain boundaries. Because this is a shared space experiment, the requisite filtering exceptions must be made between each limited domain to allow for the desired inter-domain communication to occur. Care should be taken to allow only the desired and necessary communication between each limited domain. The mechanisms used should be conformant with the limited domain security policy and may include, but are not limited to:
-* routing filters such as BGP prefix-lists, route-maps, route-policies, or other analogous mechanisms, or
-* access control filters at the domain edge<a href="#section-3-1" class="pilcrow">¶</a></p>
+<p id="section-3-1">As noted in <span>[<a href="#draft-bdmgct-spring-srv6-security" class="cite xref">draft-bdmgct-spring-srv6-security</a>]</span>, it is assumed that each ASN participating in the SRv6 SID space experiment has deployed their respective SRv6 implementations within a limited domain <span>[<a href="#RFC8799" class="cite xref">RFC8799</a>]</span> with appropriate filtering at the domain boundaries. Because this is a shared space experiment, the requisite filtering exceptions must be made between each limited domain to allow for the desired inter-domain communication to occur. Care should be taken to allow only the desired and necessary communication between each limited domain. The mechanisms used should be conformant with the limited domain security policy and may include, but are not limited to:<a href="#section-3-1" class="pilcrow">¶</a></p>
+<ul class="normal">
+<li class="normal" id="section-3-2.1">
+          <p id="section-3-2.1.1">routing filters such as BGP prefix-lists, route-maps, route-policies, or other analogous mechanisms, or<a href="#section-3-2.1.1" class="pilcrow">¶</a></p>
+</li>
+        <li class="normal" id="section-3-2.2">
+          <p id="section-3-2.2.1">access control filters at the domain edge<a href="#section-3-2.2.1" class="pilcrow">¶</a></p>
+</li>
+      </ul>
 </section>
 </div>
 <div id="example-test-case">
