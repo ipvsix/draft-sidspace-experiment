@@ -5,8 +5,8 @@
 SRv6 Operations                                                 E. Kline
 Internet-Draft                                Aalyria Technologies, Inc.
 Intended status: Experimental                                N. Buraglio
-Expires: 1 February 2025                         Energy Sciences Network
-                                                            31 July 2024
+Expires: 9 February 2025                         Energy Sciences Network
+                                                           8 August 2024
 
 
                     SID Space (5f00::/16) Experiment
@@ -57,7 +57,7 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on 1 February 2025.
+   This Internet-Draft will expire on 9 February 2025.
 
 Copyright Notice
 
@@ -80,13 +80,14 @@ Table of Contents
      2.1.  Generation of ASN derived SRv6 prefix SID
        2.1.1.  SRv6 SID Documentation Prefixes
        2.1.2.  SRv6 SID Private Use Prefixes
-   3.  Example test case
-   4.  Evaluating the Experiment
-   5.  Security Considerations
-   6.  IANA Considerations
-   7.  References
-     7.1.  Normative References
-     7.2.  Informative References
+   3.  Routing and Filtering
+   4.  Example test case
+   5.  Evaluating the Experiment
+   6.  Security Considerations
+   7.  IANA Considerations
+   8.  References
+     8.1.  Normative References
+     8.2.  Informative References
    Acknowledgments
    Authors' Addresses
 
@@ -180,7 +181,23 @@ Table of Contents
    or any /48 prefix between these, as private use ASN-derived SID
    prefixes.
 
-3.  Example test case
+3.  Routing and Filtering
+
+   As noted in [draft-bdmgct-spring-srv6-security], it is assumed that
+   each ASN participating in the SRv6 SID space experiment has deployed
+   their respective SRv6 implementations within a limited domain
+   [RFC8799] with appropriate filtering at the domain boundaries.
+   Because this is a shared space experiment, the requisite filtering
+   exceptions must be made between each limited domain to allow for the
+   desired inter-domain communication to occur.  Care should be taken to
+   allow only the desired and necessary communication between each
+   limited domain.  The mechanisms used should be conformant with the
+   limited domain security policy and may include, but are not limited
+   to: *routing filters such as BGP prefix-lists, route-maps, route-
+   policies, or other analogous mechanisms. *access control filters at
+   the domain edge
+
+4.  Example test case
 
    One possible test case is the exchange of the IPv6 prefix SID between
    two autonomous systems with independent management domains.  In this
@@ -210,24 +227,14 @@ Table of Contents
    shared between the partner ASNs.  Defining the policy or use cases is
    outside of the scope of this document.
 
-4.  Evaluating the Experiment
+5.  Evaluating the Experiment
 
-   Evaluation of the results will determine the ease of deployment and
-   operation, or lack thereof and will inform if further work can be
-   performed to improve ease of implementation and operation.
+   A survey of participants in the experiment and subsequent evaluation
+   of the results will determine the ease of deployment and operation,
+   or lack thereof, and will inform if further work can be performed to
+   improve ease of implementation and operation.
 
-   A survey of experiences of those SRv6 domain operators that opted to
-   participate should be undertaken, and results published.  Feedback
-   highlighting ease of SID allocation or management, improved security
-   through ease of filtering, etc. may all point towards a successful
-   experiment.
-
-   As use of the structure proposed here is entirely voluntary, lack of
-   adoption will clearly indicate a failed experiment.  Understanding
-   the reasons for lack of adoption may prove helpful should any further
-   experiments of this sort be undertaken.
-
-5.  Security Considerations
+6.  Security Considerations
 
    This document does not alter the inherent security posture of SRv6
    [RFC8402], [RFC8754].  The SID space prefix was allocated to improve
@@ -236,13 +243,13 @@ Table of Contents
    easier to craft filters that permit only SRv6 traffic from identified
    ASNs.
 
-6.  IANA Considerations
+7.  IANA Considerations
 
    This document has no IANA actions.
 
-7.  References
+8.  References
 
-7.1.  Normative References
+8.1.  Normative References
 
    [I-D.ietf-6man-sids]
               "SRv6 Segment Identifiers in the IPv6 Addressing
@@ -259,7 +266,12 @@ Table of Contents
               <https://www.iana.org/assignments/iana-ipv6-special-
               registry/iana-ipv6-special-registry.xhtml>.
 
-7.2.  Informative References
+8.2.  Informative References
+
+   [draft-bdmgct-spring-srv6-security]
+              "SRv6 Security Considerations", n.d.,
+              <https://datatracker.ietf.org/doc/draft-bdmgct-spring-
+              srv6-security/>.
 
    [RFC1897]  Hinden, R. and J. Postel, "IPv6 Testing Address
               Allocation", RFC 1897, DOI 10.17487/RFC1897, January 1996,
@@ -282,6 +294,10 @@ Table of Contents
               Matsushima, S., and D. Voyer, "IPv6 Segment Routing Header
               (SRH)", RFC 8754, DOI 10.17487/RFC8754, March 2020,
               <https://www.rfc-editor.org/rfc/rfc8754>.
+
+   [RFC8799]  Carpenter, B. and B. Liu, "Limited Domains and Internet
+              Protocols", RFC 8799, DOI 10.17487/RFC8799, July 2020,
+              <https://www.rfc-editor.org/rfc/rfc8799>.
 
 Acknowledgments
 
