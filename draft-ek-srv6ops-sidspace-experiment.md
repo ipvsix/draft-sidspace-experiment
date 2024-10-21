@@ -56,7 +56,7 @@ informative:
 
 --- abstract
 
-This specification proposes an experimental structure for use of the SRv6 SIDs prefix in support of Inter-domain SRv6 networks.
+This specification proposes an experimental structure for use of the SRv6 SIDs prefix in support of Inter-Domain SRv6 networks.
 The core of the proposal is to structure the address space by Autonomous System Number (ASN).
 
 Use of this proposed structure is entirely voluntary.
@@ -70,7 +70,7 @@ The goal of this experiment is to aid SRv6 operations while preserving the abili
 The prefix 5f00::/16 was allocated for this purpose [IANA-IPv6Special].
 No requirements were placed on the use of this prefix nor any recommendations made for structured use of this prefix.
 
-This specification proposes an experimental structure for use of the SRv6 SIDs prefix in support of Inter-domain SRv6 networks.
+This specification proposes an experimental structure for use of the SRv6 SIDs prefix in support of Inter-Domain SRv6 networks.
 The core of the proposal is to structure the address space by Autonomous System Number (ASN).
 
 Use of this proposed structure is entirely voluntary.
@@ -85,7 +85,7 @@ As a point of historical interest, this proposal contains echos of the structure
 # Proposed Structure
 
 The recommendation of this specification is for SRv6 domains to allocate SIDs from prefixes that are concatenations of the SRv6 SID prefix (5f00::/16) and an applicable ASN.
-Assuming 32-bit ASNs, this yields a /48 per ASN in use within an SRv6 domain, i.e. 5f00:as.hi16:as.lo16::/48.
+Assuming 32-bit ASNs, this yields a /48 per ASN in use within an SRv6 domain, i.e. `5f00:as-hi16:as-lo16::/48`.
 
 ## Generation of ASN derived SRv6 prefix SID
 
@@ -136,14 +136,14 @@ or any /48 prefix between these, as private use ASN-derived SID prefixes.
 
 # Routing and Filtering
 
-As noted in [draft-bdmgct-spring-srv6-security], it is assumed that each ASN participating in the SRv6 SID space experiment has deployed their respective SRv6 implementations within a limited domain [RFC8799] with appropriate filtering at the domain boundaries. Because this is a shared space experiment, the requisite filtering exceptions must be made between each limited domain to allow for the desired inter-domain communication to occur. Care should be taken to allow only the desired and necessary communication between each limited domain. The mechanisms used should be conformant with the limited domain security policy and may include, but are not limited to:
+As noted in [draft-bdmgct-spring-srv6-security], it is assumed that each ASN participating in the SRv6 SID space experiment has deployed their respective SRv6 implementations within a limited domain [RFC8799] with appropriate filtering at the domain boundaries. Because this is a shared space experiment, the requisite filtering exceptions must be made between each SRv6 domain to allow for the desired Inter-Domain communication to occur. Care should be taken to allow only the desired and necessary communication between each SRv6 domain. The mechanisms used should be conformant with the given domain's security policy and may include, but are not limited to:
 
 * routing filters such as BGP prefix-lists, route-maps, route-policies, or other analogous mechanisms, or
 * access control filters at the domain edge
 
 # Example test case
 
-One possible test case is the exchange of the IPv6 prefix SID between two autonomous systems with independent management domains. In this example, AS4294967294 exchanges their SRv6 SID prefix (5f00:ffff:fffe::/48) with AS4200000000 who announces their ASN derived SRv6 SID prefix (5f00:fa56:ea00::/48).
+One possible test case is the exchange of the IPv6 prefix SID between two autonomous systems with independent management domains. In this example, AS4294967294 exchanges their SRv6 SID prefix (`5f00:ffff:fffe::/48`) with AS4200000000 who announces their ASN derived SRv6 SID prefix (`5f00:fa56:ea00::/48`).
 
 ~~~~~~
   ┌─────────────────────────────────┐           ┌──────────────────────────────────┐
