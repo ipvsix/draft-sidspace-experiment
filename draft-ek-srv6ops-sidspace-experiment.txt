@@ -5,8 +5,8 @@
 SRv6 Operations                                                 E. Kline
 Internet-Draft                                Aalyria Technologies, Inc.
 Intended status: Experimental                                N. Buraglio
-Expires: 9 February 2025                         Energy Sciences Network
-                                                           8 August 2024
+Expires: 24 April 2025                           Energy Sciences Network
+                                                         21 October 2024
 
 
                     SID Space (5f00::/16) Experiment
@@ -15,7 +15,7 @@ Expires: 9 February 2025                         Energy Sciences Network
 Abstract
 
    This specification proposes an experimental structure for use of the
-   SRv6 SIDs prefix in support of Inter-domain SRv6 networks.  The core
+   SRv6 SIDs prefix in support of Inter-Domain SRv6 networks.  The core
    of the proposal is to structure the address space by Autonomous
    System Number (ASN).
 
@@ -57,7 +57,7 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on 9 February 2025.
+   This Internet-Draft will expire on 24 April 2025.
 
 Copyright Notice
 
@@ -102,7 +102,7 @@ Table of Contents
    use of this prefix.
 
    This specification proposes an experimental structure for use of the
-   SRv6 SIDs prefix in support of Inter-domain SRv6 networks.  The core
+   SRv6 SIDs prefix in support of Inter-Domain SRv6 networks.  The core
    of the proposal is to structure the address space by Autonomous
    System Number (ASN).
 
@@ -123,8 +123,8 @@ Table of Contents
    The recommendation of this specification is for SRv6 domains to
    allocate SIDs from prefixes that are concatenations of the SRv6 SID
    prefix (5f00::/16) and an applicable ASN.  Assuming 32-bit ASNs, this
-   yields a /48 per ASN in use within an SRv6 domain, i.e.
-   5f00:as.hi16:as.lo16::/48.
+   yields a /48 per ASN in use within an SRv6 domain, i.e. 5f00:as-
+   hi16:as-lo16::/48.
 
 2.1.  Generation of ASN derived SRv6 prefix SID
 
@@ -188,12 +188,11 @@ Table of Contents
    their respective SRv6 implementations within a limited domain
    [RFC8799] with appropriate filtering at the domain boundaries.
    Because this is a shared space experiment, the requisite filtering
-   exceptions must be made between each limited domain to allow for the
-   desired inter-domain communication to occur.  Care should be taken to
-   allow only the desired and necessary communication between each
-   limited domain.  The mechanisms used should be conformant with the
-   limited domain security policy and may include, but are not limited
-   to:
+   exceptions must be made between each SRv6 domain to allow for the
+   desired Inter-Domain communication to occur.  Care should be taken to
+   allow only the desired and necessary communication between each SRv6
+   domain.  The mechanisms used should be conformant with the given
+   domain's security policy and may include, but are not limited to:
 
    *  routing filters such as BGP prefix-lists, route-maps, route-
       policies, or other analogous mechanisms, or

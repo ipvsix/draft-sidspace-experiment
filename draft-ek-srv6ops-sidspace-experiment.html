@@ -8,28 +8,28 @@
 <meta content="Erik Kline" name="author">
 <meta content="Nick Buraglio" name="author">
 <meta content="
-       This specification proposes an experimental structure for use of the SRv6 SIDs prefix in support of Inter-domain SRv6 networks.
+       This specification proposes an experimental structure for use of the SRv6 SIDs prefix in support of Inter-Domain SRv6 networks.
 The core of the proposal is to structure the address space by Autonomous System Number (ASN). 
        Use of this proposed structure is entirely voluntary.
 The goal of this experiment is to aid SRv6 operations while preserving the ability to use this prefix across cooperating SRv6 domains, but not across the general Internet. 
     " name="description">
-<meta content="xml2rfc 3.22.0" name="generator">
+<meta content="xml2rfc 3.23.2" name="generator">
 <meta content="Segment Routing for IPv6 Segment Identifiers" name="keyword">
 <meta content="SRv6 SIDs" name="keyword">
 <meta content="draft-ek-srv6ops-sidspace-experiment-latest" name="ietf.draft">
 <!-- Generator version information:
-  xml2rfc 3.22.0
-    Python 3.12.3
+  xml2rfc 3.23.2
+    Python 3.12.7
     ConfigArgParse 1.7
-    google-i18n-address 3.1.0
+    google-i18n-address 3.1.1
     intervaltree 3.1.0
     Jinja2 3.1.4
     lxml 4.9.4
-    platformdirs 4.2.2
+    platformdirs 4.3.6
     pycountry 22.3.5
     PyYAML 6.0.1
     requests 2.32.3
-    setuptools 69.5.1
+    setuptools 70.3.0
     wcwidth 0.2.13
 -->
 <link href="draft-ek-srv6ops-sidspace-experiment.xml" rel="alternate" type="application/rfc+xml">
@@ -1029,11 +1029,11 @@ svg :is([fill="white"], [fill^="#fff"]) {
 <thead><tr>
 <td class="left">Internet-Draft</td>
 <td class="center">SID Space Exp.</td>
-<td class="right">August 2024</td>
+<td class="right">October 2024</td>
 </tr></thead>
 <tfoot><tr>
 <td class="left">Kline &amp; Buraglio</td>
-<td class="center">Expires 9 February 2025</td>
+<td class="center">Expires 24 April 2025</td>
 <td class="right">[Page]</td>
 </tr></tfoot>
 </table>
@@ -1046,12 +1046,12 @@ svg :is([fill="white"], [fill^="#fff"]) {
 <dd class="internet-draft">draft-ek-srv6ops-sidspace-experiment-latest</dd>
 <dt class="label-published">Published:</dt>
 <dd class="published">
-<time datetime="2024-08-08" class="published">8 August 2024</time>
+<time datetime="2024-10-21" class="published">21 October 2024</time>
     </dd>
 <dt class="label-intended-status">Intended Status:</dt>
 <dd class="intended-status">Experimental</dd>
 <dt class="label-expires">Expires:</dt>
-<dd class="expires"><time datetime="2025-02-09">9 February 2025</time></dd>
+<dd class="expires"><time datetime="2025-04-24">24 April 2025</time></dd>
 <dt class="label-authors">Authors:</dt>
 <dd class="authors">
 <div class="author">
@@ -1068,7 +1068,7 @@ svg :is([fill="white"], [fill^="#fff"]) {
 <h1 id="title">SID Space (5f00::/16) Experiment</h1>
 <section id="section-abstract">
       <h2 id="abstract"><a href="#abstract" class="selfRef">Abstract</a></h2>
-<p id="section-abstract-1">This specification proposes an experimental structure for use of the SRv6 SIDs prefix in support of Inter-domain SRv6 networks.
+<p id="section-abstract-1">This specification proposes an experimental structure for use of the SRv6 SIDs prefix in support of Inter-Domain SRv6 networks.
 The core of the proposal is to structure the address space by Autonomous System Number (ASN).<a href="#section-abstract-1" class="pilcrow">¶</a></p>
 <p id="section-abstract-2">Use of this proposed structure is entirely voluntary.
 The goal of this experiment is to aid SRv6 operations while preserving the ability to use this prefix across cooperating SRv6 domains, but not across the general Internet.<a href="#section-abstract-2" class="pilcrow">¶</a></p>
@@ -1108,7 +1108,7 @@ The goal of this experiment is to aid SRv6 operations while preserving the abili
         time. It is inappropriate to use Internet-Drafts as reference
         material or to cite them other than as "work in progress."<a href="#section-boilerplate.1-3" class="pilcrow">¶</a></p>
 <p id="section-boilerplate.1-4">
-        This Internet-Draft will expire on 9 February 2025.<a href="#section-boilerplate.1-4" class="pilcrow">¶</a></p>
+        This Internet-Draft will expire on 24 April 2025.<a href="#section-boilerplate.1-4" class="pilcrow">¶</a></p>
 </section>
 </div>
 <div id="copyright">
@@ -1200,7 +1200,7 @@ The goal of this experiment is to aid SRv6 operations while preserving the abili
 <p id="section-1-1"><span>[<a href="#I-D.ietf-6man-sids" class="cite xref">I-D.ietf-6man-sids</a>]</span> requested of IANA a dedicated prefix for Segment Routing over IPv6 <span>[<a href="#RFC8402" class="cite xref">RFC8402</a>]</span> Segment Identifiers (SRv6 SIDs), with the aim of "improv[ing] security by making it simpler to filter traffic at the edge of the SR domains."
 The prefix 5f00::/16 was allocated for this purpose <span>[<a href="#IANA-IPv6Special" class="cite xref">IANA-IPv6Special</a>]</span>.
 No requirements were placed on the use of this prefix nor any recommendations made for structured use of this prefix.<a href="#section-1-1" class="pilcrow">¶</a></p>
-<p id="section-1-2">This specification proposes an experimental structure for use of the SRv6 SIDs prefix in support of Inter-domain SRv6 networks.
+<p id="section-1-2">This specification proposes an experimental structure for use of the SRv6 SIDs prefix in support of Inter-Domain SRv6 networks.
 The core of the proposal is to structure the address space by Autonomous System Number (ASN).<a href="#section-1-2" class="pilcrow">¶</a></p>
 <p id="section-1-3">Use of this proposed structure is entirely voluntary.
 The goal is to aid SRv6 operations while preserving the ability to use this prefix across cooperating SRv6 domains, but not across the general Internet.<a href="#section-1-3" class="pilcrow">¶</a></p>
@@ -1216,7 +1216,7 @@ this proposal makes it easier to craft filters that permit only SRv6 traffic fro
 <a href="#section-2" class="section-number selfRef">2. </a><a href="#name-proposed-structure" class="section-name selfRef">Proposed Structure</a>
       </h2>
 <p id="section-2-1">The recommendation of this specification is for SRv6 domains to allocate SIDs from prefixes that are concatenations of the SRv6 SID prefix (5f00::/16) and an applicable ASN.
-Assuming 32-bit ASNs, this yields a /48 per ASN in use within an SRv6 domain, i.e. 5f00:as.hi16:as.lo16::/48.<a href="#section-2-1" class="pilcrow">¶</a></p>
+Assuming 32-bit ASNs, this yields a /48 per ASN in use within an SRv6 domain, i.e. <code>5f00:as-hi16:as-lo16::/48</code>.<a href="#section-2-1" class="pilcrow">¶</a></p>
 <div id="generation-of-asn-derived-srv6-prefix-sid">
 <section id="section-2.1">
         <h3 id="name-generation-of-asn-derived-s">
@@ -1295,7 +1295,7 @@ These prefixes are defined by RFC 6996 and presently include:<a href="#section-2
       <h2 id="name-routing-and-filtering">
 <a href="#section-3" class="section-number selfRef">3. </a><a href="#name-routing-and-filtering" class="section-name selfRef">Routing and Filtering</a>
       </h2>
-<p id="section-3-1">As noted in <span>[<a href="#draft-bdmgct-spring-srv6-security" class="cite xref">draft-bdmgct-spring-srv6-security</a>]</span>, it is assumed that each ASN participating in the SRv6 SID space experiment has deployed their respective SRv6 implementations within a limited domain <span>[<a href="#RFC8799" class="cite xref">RFC8799</a>]</span> with appropriate filtering at the domain boundaries. Because this is a shared space experiment, the requisite filtering exceptions must be made between each limited domain to allow for the desired inter-domain communication to occur. Care should be taken to allow only the desired and necessary communication between each limited domain. The mechanisms used should be conformant with the limited domain security policy and may include, but are not limited to:<a href="#section-3-1" class="pilcrow">¶</a></p>
+<p id="section-3-1">As noted in <span>[<a href="#draft-bdmgct-spring-srv6-security" class="cite xref">draft-bdmgct-spring-srv6-security</a>]</span>, it is assumed that each ASN participating in the SRv6 SID space experiment has deployed their respective SRv6 implementations within a limited domain <span>[<a href="#RFC8799" class="cite xref">RFC8799</a>]</span> with appropriate filtering at the domain boundaries. Because this is a shared space experiment, the requisite filtering exceptions must be made between each SRv6 domain to allow for the desired Inter-Domain communication to occur. Care should be taken to allow only the desired and necessary communication between each SRv6 domain. The mechanisms used should be conformant with the given domain's security policy and may include, but are not limited to:<a href="#section-3-1" class="pilcrow">¶</a></p>
 <ul class="normal">
 <li class="normal" id="section-3-2.1">
           <p id="section-3-2.1.1">routing filters such as BGP prefix-lists, route-maps, route-policies, or other analogous mechanisms, or<a href="#section-3-2.1.1" class="pilcrow">¶</a></p>
@@ -1311,7 +1311,7 @@ These prefixes are defined by RFC 6996 and presently include:<a href="#section-2
       <h2 id="name-example-test-case">
 <a href="#section-4" class="section-number selfRef">4. </a><a href="#name-example-test-case" class="section-name selfRef">Example test case</a>
       </h2>
-<p id="section-4-1">One possible test case is the exchange of the IPv6 prefix SID between two autonomous systems with independent management domains. In this example, AS4294967294 exchanges their SRv6 SID prefix (5f00:ffff:fffe::/48) with AS4200000000 who announces their ASN derived SRv6 SID prefix (5f00:fa56:ea00::/48).<a href="#section-4-1" class="pilcrow">¶</a></p>
+<p id="section-4-1">One possible test case is the exchange of the IPv6 prefix SID between two autonomous systems with independent management domains. In this example, AS4294967294 exchanges their SRv6 SID prefix (<code>5f00:ffff:fffe::/48</code>) with AS4200000000 who announces their ASN derived SRv6 SID prefix (<code>5f00:fa56:ea00::/48</code>).<a href="#section-4-1" class="pilcrow">¶</a></p>
 <div class="alignLeft art-text artwork" id="section-4-2">
 <pre>
   ┌─────────────────────────────────┐           ┌──────────────────────────────────┐
