@@ -1,7 +1,7 @@
 ---
 title: "SID Space (5f00::/16) Inter-domain Addressing Recommendations"
 abbrev: "SID Space Inter-domain Addressing."
-category: inf
+category: info
 
 docname: draft-ek-srv6ops-sidspace-experiment-latest
 submissiontype: IETF  # also: "independent", "editorial", "IAB", or "IRTF"
