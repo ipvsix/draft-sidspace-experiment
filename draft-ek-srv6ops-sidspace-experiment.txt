@@ -4,25 +4,25 @@
 
 SRv6 Operations                                                 E. Kline
 Internet-Draft                                Aalyria Technologies, Inc.
-Intended status: Experimental                                N. Buraglio
-Expires: 24 April 2025                           Energy Sciences Network
-                                                         21 October 2024
+Intended status: Informational                               N. Buraglio
+Expires: 9 May 2025                              Energy Sciences Network
+                                                         5 November 2024
 
 
-                    SID Space (5f00::/16) Experiment
+     SID Space (5f00::/16) Inter-domain Addressing Recommendations
               draft-ek-srv6ops-sidspace-experiment-latest
 
 Abstract
 
-   This specification proposes an experimental structure for use of the
-   SRv6 SIDs prefix in support of Inter-Domain SRv6 networks.  The core
-   of the proposal is to structure the address space by Autonomous
-   System Number (ASN).
+   This specification recommends a specific structured use of the SRv6
+   SIDs prefix in support of Inter-Domain SRv6 networks.  The core of
+   the proposal is to structure the address space by Autonomous System
+   Number (ASN).
 
-   Use of this proposed structure is entirely voluntary.  The goal of
-   this experiment is to aid SRv6 operations while preserving the
-   ability to use this prefix across cooperating SRv6 domains, but not
-   across the general Internet.
+   Use of this proposed structure is entirely voluntary.  Voluntary use
+   of this structure aids SRv6 operations while preserving the ability
+   to use this prefix across cooperating SRv6 domains, but not across
+   the general Internet.
 
 About This Document
 
@@ -57,7 +57,7 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on 24 April 2025.
+   This Internet-Draft will expire on 9 May 2025.
 
 Copyright Notice
 
@@ -76,13 +76,13 @@ Copyright Notice
 Table of Contents
 
    1.  Introduction
-   2.  Proposed Structure
-     2.1.  Generation of ASN derived SRv6 prefix SID
-       2.1.1.  SRv6 SID Documentation Prefixes
-       2.1.2.  SRv6 SID Private Use Prefixes
-   3.  Routing and Filtering
-   4.  Example test case
-   5.  Evaluating the Experiment
+   2.  Inter-domain SRv6 SIDs
+   3.  Proposed Structure
+     3.1.  Generation of ASN derived SRv6 prefix SID
+       3.1.1.  SRv6 SID Documentation Prefixes
+       3.1.2.  SRv6 SID Private Use Prefixes
+   4.  Routing and Filtering
+   5.  Example test case
    6.  Security Considerations
    7.  IANA Considerations
    8.  References
@@ -93,22 +93,23 @@ Table of Contents
 
 1.  Introduction
 
-   [I-D.ietf-6man-sids] requested of IANA a dedicated prefix for Segment
-   Routing over IPv6 [RFC8402] Segment Identifiers (SRv6 SIDs), with the
-   aim of "improv[ing] security by making it simpler to filter traffic
-   at the edge of the SR domains."  The prefix 5f00::/16 was allocated
-   for this purpose [IANA-IPv6Special].  No requirements were placed on
-   the use of this prefix nor any recommendations made for structured
-   use of this prefix.
+   [RFC9602] requested of IANA a dedicated prefix for Segment Routing
+   over IPv6 [RFC8402] Segment Identifiers (SRv6 SIDs), with the aim of
+   "improv[ing] security by making it simpler to filter traffic at the
+   edge of the SR domains."  The prefix 5f00::/16 was allocated for this
+   purpose [IANA-IPv6Special].  No requirements were placed on the use
+   of this prefix nor any recommendations made for structured use of
+   this prefix.
 
-   This specification proposes an experimental structure for use of the
-   SRv6 SIDs prefix in support of Inter-Domain SRv6 networks.  The core
-   of the proposal is to structure the address space by Autonomous
-   System Number (ASN).
+   This specification recommends a specific structured use of the SRv6
+   SIDs prefix in support of Inter-Domain SRv6 networks.  The core of
+   the proposal is to structure the address space by Autonomous System
+   Number (ASN).
 
-   Use of this proposed structure is entirely voluntary.  The goal is to
-   aid SRv6 operations while preserving the ability to use this prefix
-   across cooperating SRv6 domains, but not across the general Internet.
+   Use of this proposed structure is entirely voluntary.  Voluntary use
+   of this structure aids SRv6 operations while preserving the ability
+   to use this prefix across cooperating SRv6 domains, but not across
+   the general Internet.
 
    The SID space prefix was allocated to improve ease of filtering.
    Where SRv6 traffic using these prefixes may be shared with
@@ -118,7 +119,15 @@ Table of Contents
    As a point of historical interest, this proposal contains echos of
    the structure of the original 6bone test allocation [RFC1897].
 
-2.  Proposed Structure
+2.  Inter-domain SRv6 SIDs
+
+   An inter-domain SRv6 SID, as used in this document, means an SRv6 SID
+   from the address space used by one SRv6 domain that is advertised to
+   another SRv6 domain force inclusion an SRv6 Policy used by the second
+   domain when forwarding policy-specific traffic to the advertising
+   SRv6 domain.
+
+3.  Proposed Structure
 
    The recommendation of this specification is for SRv6 domains to
    allocate SIDs from prefixes that are concatenations of the SRv6 SID
@@ -126,13 +135,13 @@ Table of Contents
    yields a /48 per ASN in use within an SRv6 domain, i.e. 5f00:as-
    hi16:as-lo16::/48.
 
-2.1.  Generation of ASN derived SRv6 prefix SID
+3.1.  Generation of ASN derived SRv6 prefix SID
 
    Each unique ASN generates a prefix from the IANA allocation by
    converting mutually agreed upon ASNs to hexidecimal, and inserting
    this hex into a /48 prefix.
 
-2.1.1.  SRv6 SID Documentation Prefixes
+3.1.1.  SRv6 SID Documentation Prefixes
 
    Using 16-bit and 32-bit ASNs reserved for documentation purposes
    [IANA-ASNs] yields several SRv6 SID prefixes that might be used for
@@ -149,7 +158,7 @@ Table of Contents
    dedicated for documentation but do have a private use block as
    defined in [RFC6996].
 
-2.1.2.  SRv6 SID Private Use Prefixes
+3.1.2.  SRv6 SID Private Use Prefixes
 
    Using 16-bit and 32-bit ASNs reserved for private use purposes
    [IANA-ASNs] and defined by yields several SRv6 SID prefixes for
@@ -181,25 +190,25 @@ Table of Contents
    or any /48 prefix between these, as private use ASN-derived SID
    prefixes.
 
-3.  Routing and Filtering
+4.  Routing and Filtering
 
    As noted in [draft-bdmgct-spring-srv6-security], it is assumed that
-   each ASN participating in the SRv6 SID space experiment has deployed
-   their respective SRv6 implementations within a limited domain
-   [RFC8799] with appropriate filtering at the domain boundaries.
-   Because this is a shared space experiment, the requisite filtering
-   exceptions must be made between each SRv6 domain to allow for the
-   desired Inter-Domain communication to occur.  Care should be taken to
-   allow only the desired and necessary communication between each SRv6
-   domain.  The mechanisms used should be conformant with the given
-   domain's security policy and may include, but are not limited to:
+   each ASN using this SRv6 SID space structure has deployed their
+   respective SRv6 implementations within a limited domain [RFC8799]
+   with appropriate filtering at the domain boundaries.  Because this is
+   intended for inter-domain use, the requisite filtering exceptions
+   must be made between each SRv6 domain to allow for the desired Inter-
+   Domain communication to occur.  Care should be taken to allow only
+   the desired and necessary communication between each SRv6 domain.
+   The mechanisms used should be conformant with the given domain's
+   security policy and may include, but are not limited to:
 
    *  routing filters such as BGP prefix-lists, route-maps, route-
       policies, or other analogous mechanisms, or
 
    *  access control filters at the domain edge
 
-4.  Example test case
+5.  Example test case
 
    One possible test case is the exchange of the IPv6 prefix SID between
    two autonomous systems with independent management domains.  In this
@@ -229,13 +238,6 @@ Table of Contents
    shared between the partner ASNs.  Defining the policy or use cases is
    outside of the scope of this document.
 
-5.  Evaluating the Experiment
-
-   A survey of participants in the experiment and subsequent evaluation
-   of the results will determine the ease of deployment and operation,
-   or lack thereof, and will inform if further work can be performed to
-   improve ease of implementation and operation.
-
 6.  Security Considerations
 
    This document does not alter the inherent security posture of SRv6
@@ -253,11 +255,6 @@ Table of Contents
 
 8.1.  Normative References
 
-   [I-D.ietf-6man-sids]
-              "SRv6 Segment Identifiers in the IPv6 Addressing
-              Architecture", n.d.,
-              <https://datatracker.ietf.org/doc/draft-ietf-6man-sids/>.
-
    [IANA-ASNs]
               "Autonomous System (AS) Numbers", n.d.,
               <https://www.iana.org/assignments/as-numbers/as-
@@ -267,6 +264,11 @@ Table of Contents
               "IANA IPv6 Special-Purpose Address Registry", n.d.,
               <https://www.iana.org/assignments/iana-ipv6-special-
               registry/iana-ipv6-special-registry.xhtml>.
+
+   [RFC9602]  Krishnan, S., "Segment Routing over IPv6 (SRv6) Segment
+              Identifiers in the IPv6 Addressing Architecture",
+              RFC 9602, DOI 10.17487/RFC9602, October 2024,
+              <https://www.rfc-editor.org/rfc/rfc9602>.
 
 8.2.  Informative References
 
