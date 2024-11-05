@@ -1,6 +1,6 @@
-# SID Space (5f00::/16) Experiment
+# SID Space (5f00::/16) Inter-domain Addressing Recommendations
 
-This is the working area for the individual Internet-Draft, "SID Space (5f00::/16) Experiment".
+This is the working area for the individual Internet-Draft, "SID Space (5f00::/16) Inter-domain Addressing Recommendations".
 
 * [Editor's Copy](https://ipvsix.github.io/draft-sidspace-experiment/#go.draft-ek-srv6ops-sidspace-experiment.html)
 * [Datatracker Page](https://datatracker.ietf.org/doc/draft-ek-srv6ops-sidspace-experiment)
