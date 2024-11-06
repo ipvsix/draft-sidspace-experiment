@@ -5,8 +5,8 @@
 SRv6 Operations                                                 E. Kline
 Internet-Draft                                Aalyria Technologies, Inc.
 Intended status: Informational                               N. Buraglio
-Expires: 9 May 2025                              Energy Sciences Network
-                                                         5 November 2024
+Expires: 10 May 2025                             Energy Sciences Network
+                                                         6 November 2024
 
 
      SID Space (5f00::/16) Inter-domain Addressing Recommendations
@@ -57,7 +57,7 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on 9 May 2025.
+   This Internet-Draft will expire on 10 May 2025.
 
 Copyright Notice
 
