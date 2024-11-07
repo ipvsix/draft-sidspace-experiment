@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2024-11-05T01:02:05.075473+00:00",
+  "timestamp": "2024-11-07T01:02:24.468291+00:00",
   "repo": "ipvsix/draft-sidspace-experiment",
   "labels": [
     {
@@ -60,9 +60,9 @@
       "authorAssociation": "CONTRIBUTOR",
       "assignees": [],
       "labels": [],
-      "body": "This is not yet a standard part of the SR lexicon, I think.  We should define what it is we're talking about here.",
+      "body": "This is not yet a standard part of the SR lexicon, perhaps?  We should define what it is we're talking about here.",
       "createdAt": "2024-10-21T02:34:36Z",
-      "updatedAt": "2024-10-21T02:34:37Z",
+      "updatedAt": "2024-11-05T17:09:43Z",
       "closedAt": null,
       "comments": []
     }
@@ -80,7 +80,7 @@
       "labels": [],
       "body": "High level ramblings about the proposed experiment.",
       "createdAt": "2024-05-20T02:37:19Z",
-      "updatedAt": "2024-05-20T02:42:28Z",
+      "updatedAt": "2024-11-05T16:39:17Z",
       "baseRepository": "ipvsix/draft-sidspace-experiment",
       "baseRefName": "main",
       "baseRefOid": "08df2dab045430d9ef087bc19f4229bd022ab617",
@@ -386,6 +386,112 @@
           "comments": []
         }
       ]
+    },
+    {
+      "number": 9,
+      "id": "PR_kwDOL914os6A9N5o",
+      "title": "Incorporate feedback from SRV6OPS author meeting",
+      "url": "https://github.com/ipvsix/draft-sidspace-experiment/pull/9",
+      "state": "MERGED",
+      "author": "ekline",
+      "authorAssociation": "CONTRIBUTOR",
+      "assignees": [],
+      "labels": [],
+      "body": "Includes:\r\n* change document target track to Informational\r\n* initial attempt to define \"inter-domain SRv6 SID\"\r\n* clean up various \"experiment\"/\"experimental\" wording and text\r\n\r\nNote: the name of the file should also be changed, but this PR doesn't do that.",
+      "createdAt": "2024-11-05T16:55:54Z",
+      "updatedAt": "2024-11-05T17:09:17Z",
+      "baseRepository": "ipvsix/draft-sidspace-experiment",
+      "baseRefName": "main",
+      "baseRefOid": "338a04f54f3dd5de2787df56cab3723d3cf5b60a",
+      "headRepository": "ipvsix/draft-sidspace-experiment",
+      "headRefName": "ekline-patch-2",
+      "headRefOid": "3ca6c28d46501e7c8673e09df94a2511164ecbc2",
+      "closedAt": "2024-11-05T17:05:53Z",
+      "mergedAt": "2024-11-05T17:05:52Z",
+      "mergedBy": "buraglio",
+      "mergeCommit": {
+        "oid": "0b13bc0db67c0f7b9f708970d740d4e6a53133d9"
+      },
+      "comments": [
+        {
+          "author": "ekline",
+          "authorAssociation": "CONTRIBUTOR",
+          "body": "Relates to #8 ",
+          "createdAt": "2024-11-05T17:09:14Z",
+          "updatedAt": "2024-11-05T17:09:14Z"
+        }
+      ],
+      "reviews": [
+        {
+          "id": "PRR_kwDOL914os6QBMXr",
+          "commit": {
+            "abbreviatedOid": "3ca6c28"
+          },
+          "author": "buraglio",
+          "authorAssociation": "COLLABORATOR",
+          "state": "APPROVED",
+          "body": "Looks great!",
+          "createdAt": "2024-11-05T17:05:45Z",
+          "updatedAt": "2024-11-05T17:05:45Z",
+          "comments": []
+        }
+      ]
+    },
+    {
+      "number": 10,
+      "id": "PR_kwDOL914os6A9WKe",
+      "title": "Update and rename draft-ek-srv6ops-sidspace-experiment.md to draft-ek\u2026",
+      "url": "https://github.com/ipvsix/draft-sidspace-experiment/pull/10",
+      "state": "MERGED",
+      "author": "ekline",
+      "authorAssociation": "CONTRIBUTOR",
+      "assignees": [],
+      "labels": [],
+      "body": "\u2026nb-srv6ops-interdomain-sidspace.md",
+      "createdAt": "2024-11-05T17:13:19Z",
+      "updatedAt": "2024-11-05T17:18:10Z",
+      "baseRepository": "ipvsix/draft-sidspace-experiment",
+      "baseRefName": "main",
+      "baseRefOid": "0b13bc0db67c0f7b9f708970d740d4e6a53133d9",
+      "headRepository": "ipvsix/draft-sidspace-experiment",
+      "headRefName": "ekline-rename-draft",
+      "headRefOid": "8aadeac74a2fbfdbb6c82afea1a7807643d79731",
+      "closedAt": "2024-11-05T17:17:47Z",
+      "mergedAt": "2024-11-05T17:17:47Z",
+      "mergedBy": "ekline",
+      "mergeCommit": {
+        "oid": "d21151ff054ab77c9bdfd7f1db43e98a3ad63aa0"
+      },
+      "comments": [],
+      "reviews": []
+    },
+    {
+      "number": 11,
+      "id": "PR_kwDOL914os6BFK-W",
+      "title": "try migrating github actions artifacts v3 -> v4",
+      "url": "https://github.com/ipvsix/draft-sidspace-experiment/pull/11",
+      "state": "MERGED",
+      "author": "ekline",
+      "authorAssociation": "CONTRIBUTOR",
+      "assignees": [],
+      "labels": [],
+      "body": "",
+      "createdAt": "2024-11-06T16:25:39Z",
+      "updatedAt": "2024-11-06T16:28:57Z",
+      "baseRepository": "ipvsix/draft-sidspace-experiment",
+      "baseRefName": "main",
+      "baseRefOid": "d21151ff054ab77c9bdfd7f1db43e98a3ad63aa0",
+      "headRepository": "ipvsix/draft-sidspace-experiment",
+      "headRefName": "ekline-patch-1",
+      "headRefOid": "6c472de3e966123fbfead33a82d42c9d40161c70",
+      "closedAt": "2024-11-06T16:28:39Z",
+      "mergedAt": "2024-11-06T16:28:39Z",
+      "mergedBy": "ekline",
+      "mergeCommit": {
+        "oid": "0cb68215902dbd85728e9db908c67d3306bde60b"
+      },
+      "comments": [],
+      "reviews": []
     }
   ]
 }
