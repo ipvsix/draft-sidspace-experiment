@@ -2,10 +2,10 @@
 
 This is the working area for the individual Internet-Draft, "SID Space (5f00::/16) Inter-domain Addressing Recommendations".
 
-* [Editor's Copy](https://ipvsix.github.io/draft-sidspace-experiment/#go.draft-ek-srv6ops-sidspace-experiment.html)
-* [Datatracker Page](https://datatracker.ietf.org/doc/draft-ek-srv6ops-sidspace-experiment)
-* [Individual Draft](https://datatracker.ietf.org/doc/html/draft-ek-srv6ops-sidspace-experiment)
-* [Compare Editor's Copy to Individual Draft](https://ipvsix.github.io/draft-sidspace-experiment/#go.draft-ek-srv6ops-sidspace-experiment.diff)
+* [Editor's Copy](https://ipvsix.github.io/draft-sidspace-experiment/#go.draft-eknb-srv6ops-interdomain-sidspace.html)
+* [Datatracker Page](https://datatracker.ietf.org/doc/draft-eknb-srv6ops-interdomain-sidspace)
+* [Individual Draft](https://datatracker.ietf.org/doc/html/draft-eknb-srv6ops-interdomain-sidspace)
+* [Compare Editor's Copy to Individual Draft](https://ipvsix.github.io/draft-sidspace-experiment/#go.draft-eknb-srv6ops-interdomain-sidspace.diff)
 
 
 ## Contributing
