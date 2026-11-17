@@ -20,7 +20,7 @@ venue:
   mail: "srv6ops@ietf.org"
   arch: "https://mailarchive.ietf.org/arch/browse/srv6ops/"
   github: "ipvsix/draft-sidspace-experiment"
-  latest: "https://ipvsix.github.io/draft-sidspace-experiment/draft-ek-srv6ops-sidspace-experiment.html"
+  latest: "https://ipvsix.github.io/draft-sidspace-experiment/draft-eknb-srv6ops-interdomain-sidspace.html"
 
 author:
  -
@@ -48,9 +48,15 @@ informative:
   RFC5398:
   RFC6996:
   RFC8799:
-  draft-bdmgct-spring-srv6-security:
-    target: https://datatracker.ietf.org/doc/draft-bdmgct-spring-srv6-security/
+  I-D.ietf-spring-srv6-security:
+    target: https://datatracker.ietf.org/doc/draft-ietf-spring-srv6-security/
     title: SRv6 Security Considerations
+  I-D.ietf-srv6ops-problem-summary:
+    target: https://datatracker.ietf.org/doc/draft-ietf-srv6ops-problem-summary/
+    title: SRv6 Deployment and Operation Problem Summary
+  I-D.ietf-srv6ops-srv6addressing:
+    target: https://datatracker.ietf.org/doc/draft-ietf-srv6ops-srv6addressing/
+    title: Addressing Recommendations for SRv6
 
 --- abstract
 
@@ -80,9 +86,13 @@ this proposal makes it easier to craft filters that permit only SRv6 traffic fro
 
 As a point of historical interest, this proposal contains echos of the structure of the original 6bone test allocation [RFC1897].
 
+Intra-domain SID addressing recommendations are provided in [I-D.ietf-srv6ops-srv6addressing].
+This document addresses the complementary inter-domain case.
+The inter-domain SID allocation problem is identified as DOP-6 in [I-D.ietf-srv6ops-problem-summary].
+
 # Inter-domain SRv6 SIDs
 
-An inter-domain SRv6 SID, as used in this document, means an SRv6 SID from the address space used by one SRv6 domain that is advertised to another SRv6 domain force inclusion an SRv6 Policy used by the second domain when forwarding policy-specific traffic to the advertising SRv6 domain.
+An inter-domain SRv6 SID, as used in this document, means an SRv6 SID from the address space used by one SRv6 domain that is advertised to another SRv6 domain for inclusion in an SRv6 Policy used by the receiving domain when forwarding policy-specific traffic toward the advertising domain.
 
 # Proposed Structure
 
@@ -91,7 +101,7 @@ Assuming 32-bit ASNs, this yields a /48 per ASN in use within an SRv6 domain, i.
 
 ## Generation of ASN derived SRv6 prefix SID
 
-Each unique ASN generates a prefix from the IANA allocation by converting mutually agreed upon ASNs to hexidecimal, and inserting this hex into a /48 prefix.
+Each unique ASN generates a prefix from the IANA allocation by converting mutually agreed upon ASNs to hexadecimal, and inserting this hex into a /48 prefix.
 
 ### SRv6 SID Documentation Prefixes
 
@@ -106,12 +116,12 @@ These prefixes presently include ASNs in the range of 64496-64511 as defined in 
 
 or any /48 prefix between these.
 
-It should be noted that 32-but ASNs do not have a specific range dedicated for documentation but do have a private use block as defined in [RFC6996].
+It should be noted that 32-bit ASNs do not have a specific range dedicated for documentation but do have a private use block as defined in [RFC6996].
 
 ### SRv6 SID Private Use Prefixes
 
-Using 16-bit and 32-bit ASNs reserved for private use purposes [IANA-ASNs] and defined by yields several SRv6 SID prefixes for private use.
-These prefixes are defined by RFC 6996 and presently include:
+Using 16-bit and 32-bit ASNs reserved for private use purposes [IANA-ASNs] and defined in [RFC6996] yields several SRv6 SID prefixes for private use.
+These prefixes presently include:
 
 | ASN size | Private Use Range     |
 |----------|-----------------------|
@@ -138,7 +148,7 @@ or any /48 prefix between these, as private use ASN-derived SID prefixes.
 
 # Routing and Filtering
 
-As noted in [draft-bdmgct-spring-srv6-security], it is assumed that each ASN using this SRv6 SID space structure has deployed their respective SRv6 implementations within a limited domain [RFC8799] with appropriate filtering at the domain boundaries. Because this is intended for inter-domain use, the requisite filtering exceptions must be made between each SRv6 domain to allow for the desired Inter-Domain communication to occur. Care should be taken to allow only the desired and necessary communication between each SRv6 domain. The mechanisms used should be conformant with the given domain's security policy and may include, but are not limited to:
+As noted in [I-D.ietf-spring-srv6-security], it is assumed that each ASN using this SRv6 SID space structure has deployed their respective SRv6 implementations within a limited domain [RFC8799] with appropriate filtering at the domain boundaries. Because this is intended for inter-domain use, the requisite filtering exceptions must be made between each SRv6 domain to allow for the desired Inter-Domain communication to occur. Care should be taken to allow only the desired and necessary communication between each SRv6 domain. The mechanisms used should be conformant with the given domain's security policy and may include, but are not limited to:
 
 * routing filters such as BGP prefix-lists, route-maps, route-policies, or other analogous mechanisms, or
 * access control filters at the domain edge
@@ -186,4 +196,5 @@ This document has no IANA actions.
 # Acknowledgments
 {:numbered="false"}
 
-TODO acknowledge.
+Dhruv Dhody, David Farmer, John Kristoff
+
